@@ -1,0 +1,3 @@
+C:/Users/franc/Documents/Personal_Projects/3DRayTracer/build/CMakeFiles/3d_raytracer_cpp.dir
+C:/Users/franc/Documents/Personal_Projects/3DRayTracer/build/CMakeFiles/edit_cache.dir
+C:/Users/franc/Documents/Personal_Projects/3DRayTracer/build/CMakeFiles/rebuild_cache.dir
