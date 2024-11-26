@@ -7,8 +7,8 @@
 },
 {
   "directory": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/3d_raytracer_cpp.dir/includes_CXX.rsp -g -o CMakeFiles\\3d_raytracer_cpp.dir\\src\\test.cpp.obj -c C:\\Users\\franc\\Documents\\Personal_Projects\\3DRayTracer\\src\\test.cpp",
-  "file": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/test.cpp",
-  "output": "CMakeFiles/3d_raytracer_cpp.dir/src/test.cpp.obj"
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/3d_raytracer_cpp.dir/includes_CXX.rsp -g -o CMakeFiles\\3d_raytracer_cpp.dir\\src\\math.cpp.obj -c C:\\Users\\franc\\Documents\\Personal_Projects\\3DRayTracer\\src\\math.cpp",
+  "file": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/math.cpp",
+  "output": "CMakeFiles/3d_raytracer_cpp.dir/src/math.cpp.obj"
 }
 ]

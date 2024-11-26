@@ -120,7 +120,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/test.cpp",
+			"path" : "src/math.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

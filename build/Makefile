@@ -152,29 +152,29 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/test.obj: src/test.cpp.obj
-.PHONY : src/test.obj
+src/math.obj: src/math.cpp.obj
+.PHONY : src/math.obj
 
 # target to build an object file
-src/test.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/test.cpp.obj
-.PHONY : src/test.cpp.obj
+src/math.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/math.cpp.obj
+.PHONY : src/math.cpp.obj
 
-src/test.i: src/test.cpp.i
-.PHONY : src/test.i
+src/math.i: src/math.cpp.i
+.PHONY : src/math.i
 
 # target to preprocess a source file
-src/test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/test.cpp.i
-.PHONY : src/test.cpp.i
+src/math.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/math.cpp.i
+.PHONY : src/math.cpp.i
 
-src/test.s: src/test.cpp.s
-.PHONY : src/test.s
+src/math.s: src/math.cpp.s
+.PHONY : src/math.s
 
 # target to generate assembly for a file
-src/test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/test.cpp.s
-.PHONY : src/test.cpp.s
+src/math.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/math.cpp.s
+.PHONY : src/math.cpp.s
 
 # Help Target
 help:
@@ -188,9 +188,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
-	@echo ... src/test.obj
-	@echo ... src/test.i
-	@echo ... src/test.s
+	@echo ... src/math.obj
+	@echo ... src/math.i
+	@echo ... src/math.s
 .PHONY : help
 
 
