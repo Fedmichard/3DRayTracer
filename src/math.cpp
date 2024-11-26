@@ -39,8 +39,10 @@ bool tuple::isEqualFloats(float a, float b) {
 }
 
 
-vector vector::add(tuple tuple1) { 
-    vector new_tuple(x_value + tuple1.x(), y_value + tuple1.y(), z_value + tuple1.z());
+tuple tuple::add(tuple tuple1) {
+    float x, y, z, w;
+
+    tuple new_tuple(x_value + tuple1.x(), y_value + tuple1.y(), z_value + tuple1.z(), w);
 
     return new_tuple;
 }

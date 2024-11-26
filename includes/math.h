@@ -16,18 +16,17 @@ public:
 
     bool isEqualFloats(float a, float b);
     bool isEqual(tuple tuple);
+    tuple add(tuple tuple);
 };
 
 class vector : public tuple {
 public:
     vector(float x, float y, float z) : tuple(x, y, z, 0.0f) {};
-    vector add(tuple tuple);
 };
 
 class point : public tuple {
 public:
     point(float x, float y, float z) : tuple(x, y, z, 1.0f) {};
-    point add(tuple tuple);
 };
 
 

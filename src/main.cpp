@@ -41,7 +41,7 @@ int main() {
     std::cout << vector1.z() << std::endl;
     std::cout << tuple1.x() << std::endl;
 
-    vector new_vector = vector1.add(point1);
+    tuple tuple_new = vector1.add(point1);
     
     std::cout << tuple_new.x() << std::endl;
     std::cout << tuple_new.y() << std::endl;
