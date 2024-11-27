@@ -1,21 +1,44 @@
 #include "math.h"
 
-float tuple::x() {
+float tuple::getX() {
     return x_value; 
 }
 
-float tuple::y() {
+float tuple::getY() {
     return y_value; 
 }
 
-float tuple::z() {
+float tuple::getZ() {
     return z_value; 
 }
 
-bool tuple::isEqual(tuple tuple1)  {
-    if (isEqualFloats(x_value, tuple1.x_value)) {
-        if (isEqualFloats(y_value, tuple1.y_value)) {
-            if (isEqualFloats(z_value, tuple1.z_value)) {
+
+float tuple::getW() {
+    return w_value;
+}
+
+bool tuple::isVector() {
+    return w_value == 0.0f;
+}
+
+bool tuple::isPoint() {
+    return w_value == 1.0f;
+}
+
+bool tuple::isFloatEqual(float a, float b) {
+    const float e = 0.00001;
+
+    if (std::abs(a - b) < e) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool tuple::isTupleEqual(tuple tuple1)  {
+    if (isFloatEqual(x_value, tuple1.x_value)) {
+        if (isFloatEqual(y_value, tuple1.y_value)) {
+            if (isFloatEqual(z_value, tuple1.z_value)) {
                 return true;
             } else {
                 return false;
@@ -28,21 +51,14 @@ bool tuple::isEqual(tuple tuple1)  {
     }
 }
 
-bool tuple::isEqualFloats(float a, float b) {
-    const float e = 0.00001;
+tuple tuple::operator+(tuple tuple1) {
+    tuple new_tuple(x_value + tuple1.getX(), y_value + tuple1.getY(), z_value + tuple1.getZ(), w_value);
 
-    if (std::abs(a - b) < e) {
-        return true;
-    } else {
-        return false;
-    }
+    return new_tuple;
 }
 
-
-tuple tuple::add(tuple tuple1) {
-    float x, y, z, w;
-
-    tuple new_tuple(x_value + tuple1.x(), y_value + tuple1.y(), z_value + tuple1.z(), w);
+tuple tuple::operator-(tuple tuple1) {
+    tuple new_tuple(x_value - tuple1.getX(), y_value - tuple1.getY(), z_value - tuple1.getZ(), w_value);
 
     return new_tuple;
 }
