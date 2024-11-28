@@ -3,10 +3,14 @@
 
 #include <cmath>
 
+class tuple;
+class point;
+class vector;
+class color;
+
 class tuple {
 private:
-    //                               1.0f = Point, 0.0f = Vector
-    float x_value, y_value, z_value, w_value;
+    float x_value, y_value, z_value, w_value; // 1.0f = Point, 0.0f = Vector
 
 public:
     tuple(float x, float y, float z, float w) : x_value(x), y_value(y), z_value(z), w_value(w) {};
@@ -36,18 +40,42 @@ public:
 class point : public tuple {
 public:
     point(float x, float y, float z) : tuple(x, y, z, 1.0f) {}
+
+    // operator overloading functions
+    point operator+(vector vector);
+    vector operator+(point point);
+    point operator-(vector vector);
+    vector operator-(point point);
 };
 
 class vector : public tuple {
 public:
     vector(float x, float y, float z) : tuple(x, y, z, 0.0f) {}
+
+    // Operator overloading
+    vector operator+(vector vector);
+    point operator+(point point);
+    vector operator-(vector vector);
    
-    // math functions
+    // Math functions
     float magnitude(); // get the magnitude of a vector
     tuple normalize(); // normalize a vector
+
     // Made into a static so it can be called without an instance of tuple
-    static float dot(vector tuple1, vector tuple2); // dot product
+    static float dot(vector vector1, vector vector2); // dot product
     static vector cross(vector vector1, vector vector2);
+};
+
+class color : public tuple {
+public:
+    color(float r, float g, float b) : tuple(r, g, b, 1.0f) {}
+
+    // operator overloading functions
+    color operator+(color color);
+    color operator-(color color);
+    color operator*(float scalar); // scalar multiplication
+    color operator*(color color1);
+    color operator/(float scalar); // scalar division
 };
 
 #endif
