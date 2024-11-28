@@ -3,25 +3,29 @@
 #include "math.h"
 
 int main() {
-    tuple tuple1(1.0f, 2.0f, 3.0f, 0.0f);
-    tuple tuple2(2.0f, 3.0f, 4.0f, 0.0f);
-    tuple tuple4(1.0f, 2.0f, 3.0f, 0.0f);
-    tuple tuple3 = tuple4.normalize();
 
-    std::cout << "Tuple 3 x: " << tuple3.getX() << std::endl;
-    std::cout << "Tuple 3 y: " << tuple3.getY() << std::endl;
-    std::cout << "Tuple 3 z: " << tuple3.getZ() << std::endl;
-    std::cout << "Tuple 3 w: " << tuple3.getW() << std::endl;
-    std::cout << "" << std::endl;
-    std::string isVector = tuple3.isVector() ? "True" : "False";
-    std::string isPoint = tuple3.isPoint() ? "True" : "False";
-    std::cout << "Is Tuple3 Vector?: " << isVector << std::endl;
-    std::cout << "Is Tuple3 Point?: " << isPoint << std::endl;
-    std::cout << "" << std::endl;
-    std::cout << "Tuple 3 Magnitude: " << tuple3.magnitude() << std::endl;
-    std::cout << "Dot: " << tuple::dot(tuple1, tuple2) << std::endl;
-    tuple tuple6 = tuple::cross(tuple2, tuple1);
-    std::cout << "Cross of tuple1 and tuple2: " << "X: " << tuple6.getX() << " Y: " << tuple6.getY() << " Z: " << tuple6.getZ() << std::endl;
+    tuple t1(1.0f, 0.0f, 2.0f, 1.0f);
+    tuple t2(1.0f, 0.0f, 2.0f, 0.0f);
+
+    vector v1(1.0f, 2.0f, 3.0f);
+    vector v2(2.0f, 3.0f, 4.0f);
+    
+    point p1(3.0f, 2.0f, 1.0f);
+    point p2(5.0f, 6.0f, 7.0f);
+
+    vector new_vec = vector::cross(v1, v2);
+    float dot = vector::dot(v1, v2);
+
+    std::string is_vector = new_vec.isVector() == 1 ? "Yes" : "No";
+    std::string is_point = new_vec.isPoint() == 1 ? "Yes" : "No";
+
+    std::cout << "Is it a Vector? " << is_vector << std::endl;
+    std::cout << "Is it a Point? " << is_point << std::endl;
+    std::cout << "New Tuple X: " << new_vec.getX() << std::endl;
+    std::cout << "New Tuple Y: " << new_vec.getY() << std::endl;
+    std::cout << "New Tuple Z: " << new_vec.getZ() << std::endl;
+    std::cout << "New Tuple W: " << new_vec.getW() << std::endl;
+    std::cout << "New Tuple Dot: " << dot << std::endl;
 
     return 0;
 }

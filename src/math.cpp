@@ -9,15 +9,35 @@ bool tuple::isPoint() {
 }
 
 tuple tuple::operator+(tuple tuple1) {
-    tuple new_tuple(x_value + tuple1.getX(), y_value + tuple1.getY(), z_value + tuple1.getZ(), w_value);
+    if ((w_value == 1.0f) && (tuple1.getW() == 1.0f)) {
+        return tuple(x_value + tuple1.getX(), y_value + tuple1.getY(), z_value + tuple1.getZ(), 0.0f);
+    }
+    
+    if ((w_value == 1.0f) && (tuple1.getW() == 0.0f)) {
+        return tuple(x_value + tuple1.getX(), y_value + tuple1.getY(), z_value + tuple1.getZ(), 1.0f);
+    }
+    
+    if ((w_value == 0.0f) && (tuple1.getW() == 1.0f)) {
+        return tuple(x_value + tuple1.getX(), y_value + tuple1.getY(), z_value + tuple1.getZ(), 1.0f);
+    }
 
-    return new_tuple;
+    return tuple(x_value + tuple1.getX(), y_value + tuple1.getY(), z_value + tuple1.getZ(), w_value);
 }
 
 tuple tuple::operator-(tuple tuple1) {
-    tuple new_tuple(x_value - tuple1.getX(), y_value - tuple1.getY(), z_value - tuple1.getZ(), std::abs(w_value - tuple1.getW()));
+    if ((w_value == 1.0f) && (tuple1.getW() == 1.0f)) {
+        return tuple(x_value - tuple1.getX(), y_value - tuple1.getY(), z_value - tuple1.getZ(), 0.0f);
+    }
+    
+    if ((w_value == 1.0f) && (tuple1.getW() == 0.0f)) {
+        return tuple(x_value - tuple1.getX(), y_value - tuple1.getY(), z_value - tuple1.getZ(), 1.0f);
+    }
+    
+    if ((w_value == 0.0f) && (tuple1.getW() == 1.0f)) {
+        return tuple(x_value - tuple1.getX(), y_value - tuple1.getY(), z_value - tuple1.getZ(), 0.0f);
+    }
 
-    return new_tuple;
+    return tuple(x_value - tuple1.getX(), y_value - tuple1.getY(), z_value - tuple1.getZ(), w_value);
 }
 
 tuple tuple::operator-() {
@@ -64,27 +84,26 @@ bool tuple::isTupleEqual(tuple tuple1)  {
     }
 }
 
-float tuple::magnitude() {
-    return std::sqrt((x_value * x_value) + (y_value * y_value) + (z_value * z_value));
+float vector::magnitude() {
+    return std::sqrt((getX() * getX()) + (getY() * getY()) + (getZ() * getZ()));
 }
 
-tuple tuple::normalize() {
-    tuple new_tuple((x_value / tuple::magnitude()), (y_value / tuple::magnitude()), (z_value / tuple::magnitude()), w_value);
+tuple vector::normalize() {
+    tuple new_tuple((getX() / magnitude()), (getY() / magnitude()), (getZ() / magnitude()), getW());
 
     return new_tuple;
 }
 
-float tuple::dot(tuple tuple1, tuple tuple2) {
-    return (tuple1.x_value * tuple2.x_value) + (tuple1.y_value * tuple2.y_value) + (tuple1.z_value * tuple2.z_value);
+float vector::dot(vector vector1, vector vector2) {
+    return (vector1.getX() * vector2.getX()) + (vector1.getY() * vector2.getY() + (vector1.getZ() * vector2.getZ()));
 }
 
 
-tuple tuple::cross(tuple tuple1, tuple tuple2) {
-    tuple new_tuple(
-        (tuple1.y_value * tuple2.z_value) - (tuple1.z_value * tuple2.y_value),
-        (tuple1.z_value * tuple2.x_value) - (tuple1.x_value * tuple2.z_value),
-        (tuple1.x_value * tuple2.y_value) - (tuple1.y_value * tuple2.x_value),
-        0.0f
+vector vector::cross(vector vector1, vector vector2) {
+    vector new_tuple(
+        (vector1.getY() * vector2.getZ()) - (vector1.getZ() * vector2.getY()),
+        (vector1.getZ() * vector2.getX()) - (vector1.getX() * vector2.getZ()),
+        (vector1.getX() * vector2.getY()) - (vector1.getY() * vector2.getX())
     );
 
     return new_tuple;

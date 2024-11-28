@@ -31,13 +31,23 @@ public:
     tuple operator-(); // negative a tuple
     tuple operator*(float scalar); // scalar multiplication
     tuple operator/(float scalar); // scalar division
+};
 
+class point : public tuple {
+public:
+    point(float x, float y, float z) : tuple(x, y, z, 1.0f) {}
+};
+
+class vector : public tuple {
+public:
+    vector(float x, float y, float z) : tuple(x, y, z, 0.0f) {}
+   
     // math functions
-    float magnitude(); // get the magnitude of a tuple
+    float magnitude(); // get the magnitude of a vector
     tuple normalize(); // normalize a vector
     // Made into a static so it can be called without an instance of tuple
-    static float dot(tuple tuple1, tuple tuple2); // dot product
-    static tuple cross(tuple tuple1, tuple tuple2);
+    static float dot(vector tuple1, vector tuple2); // dot product
+    static vector cross(vector vector1, vector vector2);
 };
 
 #endif
