@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "3d_raytracer_cpp.exe"
   "3d_raytracer_cpp.exe.manifest"
   "3d_raytracer_cpp.pdb"
+  "CMakeFiles/3d_raytracer_cpp.dir/src/canvas.cpp.obj"
+  "CMakeFiles/3d_raytracer_cpp.dir/src/canvas.cpp.obj.d"
   "CMakeFiles/3d_raytracer_cpp.dir/src/main.cpp.obj"
   "CMakeFiles/3d_raytracer_cpp.dir/src/main.cpp.obj.d"
   "CMakeFiles/3d_raytracer_cpp.dir/src/math.cpp.obj"

@@ -154,4 +154,11 @@ CMakeFiles/3d_raytracer_cpp.dir/src/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.1.0/tr1/modified_bessel_func.tcc \
  C:/msys64/mingw64/include/c++/14.1.0/tr1/poly_hermite.tcc \
  C:/msys64/mingw64/include/c++/14.1.0/tr1/poly_laguerre.tcc \
- C:/msys64/mingw64/include/c++/14.1.0/tr1/riemann_zeta.tcc
+ C:/msys64/mingw64/include/c++/14.1.0/tr1/riemann_zeta.tcc \
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/canvas.h \
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/math.h \
+ C:/msys64/mingw64/include/c++/14.1.0/vector \
+ C:/msys64/mingw64/include/c++/14.1.0/bits/stl_uninitialized.h \
+ C:/msys64/mingw64/include/c++/14.1.0/bits/stl_vector.h \
+ C:/msys64/mingw64/include/c++/14.1.0/bits/stl_bvector.h \
+ C:/msys64/mingw64/include/c++/14.1.0/bits/vector.tcc

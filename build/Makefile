@@ -128,6 +128,30 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/build
 .PHONY : 3d_raytracer_cpp/fast
 
+src/canvas.obj: src/canvas.cpp.obj
+.PHONY : src/canvas.obj
+
+# target to build an object file
+src/canvas.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/canvas.cpp.obj
+.PHONY : src/canvas.cpp.obj
+
+src/canvas.i: src/canvas.cpp.i
+.PHONY : src/canvas.i
+
+# target to preprocess a source file
+src/canvas.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/canvas.cpp.i
+.PHONY : src/canvas.cpp.i
+
+src/canvas.s: src/canvas.cpp.s
+.PHONY : src/canvas.s
+
+# target to generate assembly for a file
+src/canvas.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/canvas.cpp.s
+.PHONY : src/canvas.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -185,6 +209,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... 3d_raytracer_cpp
+	@echo ... src/canvas.obj
+	@echo ... src/canvas.i
+	@echo ... src/canvas.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
