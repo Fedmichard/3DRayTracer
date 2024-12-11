@@ -1,4 +1,5 @@
 # 3DRayTracer
+Created with the Guidance of Ray Tracer Challenge : A Test-driven Guide to Your First 3d Renderer created by Jamis Buck. Created a 3D raytracer in C++ in a test driven approach. Incorporates features such as: lighting.
 ### Chapter 1:
 
 ### Chapter 2:
