@@ -29,7 +29,7 @@ projectile tick(environment env, projectile proj) {
 
 int main() {
     canvas c(width, height);
-    color color1(1.0f, 0.0f, 0.0f);
+    color color1(0.0f, 1.0f, 1.0f);
 
     // environment
     environment e = {
@@ -63,8 +63,6 @@ int main() {
     ppm_file.close();
 
     std::cout << "Trajector saved as 'trajectory.ppm'" << std::endl;
-
-    // std::cout << c.canvas_to_ppm();
     
     return 0;
 }

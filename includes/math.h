@@ -80,6 +80,8 @@ public:
     color operator/(float scalar); // scalar division
 
     // handle output
+    // friend gives access to private variables?
+    // operator overload for output
     friend std::ostream& operator<<(std::ostream& os, color& c) {
         os << static_cast<int>(std::round(std::clamp(c.getX(), 0.0f, 1.0f) * 255)) << " "
            << static_cast<int>(std::round(std::clamp(c.getY(), 0.0f, 1.0f) * 255)) << " "
