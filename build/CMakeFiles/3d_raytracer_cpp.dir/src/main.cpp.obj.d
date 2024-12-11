@@ -138,6 +138,11 @@ CMakeFiles/3d_raytracer_cpp.dir/src/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.1.0/bits/ostream.tcc \
  C:/msys64/mingw64/include/c++/14.1.0/istream \
  C:/msys64/mingw64/include/c++/14.1.0/bits/istream.tcc \
+ C:/msys64/mingw64/include/c++/14.1.0/fstream \
+ C:/msys64/mingw64/include/c++/14.1.0/bits/codecvt.h \
+ C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/c++io.h \
+ C:/msys64/mingw64/include/c++/14.1.0/bits/fstream.tcc \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/math.h \
  C:/msys64/mingw64/include/c++/14.1.0/cmath \
  C:/msys64/mingw64/include/math.h \

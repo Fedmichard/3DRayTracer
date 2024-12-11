@@ -3,6 +3,7 @@
 
 #include "math.h"
 #include <vector>
+#include <string>
 
 class canvas {
 private:
@@ -25,7 +26,7 @@ public:
     };
 
     void write_pixel(int x, int y, color color);
-    void canvas_to_ppm();
+    std::string canvas_to_ppm();
     color pixel_at(int x, int y);
 };
 
