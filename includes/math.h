@@ -2,6 +2,8 @@
 #define MATH_H
 
 #include <cmath>
+#include <ostream>
+#include <algorithm>
 
 class tuple;
 class point;
@@ -76,6 +78,15 @@ public:
     color operator*(float scalar); // scalar multiplication
     color operator*(color color1);
     color operator/(float scalar); // scalar division
+
+    // handle output
+    friend std::ostream& operator<<(std::ostream& os, color& c) {
+        os << static_cast<int>(std::round(std::clamp(c.getX(), 0.0f, 1.0f) * 255)) << " "
+           << static_cast<int>(std::round(std::clamp(c.getY(), 0.0f, 1.0f) * 255)) << " "
+           << static_cast<int>(std::round(std::clamp(c.getZ(), 0.0f, 1.0f) * 255));
+
+        return os;
+    };
 };
 
 #endif

@@ -26,6 +26,7 @@ public:
     };
 
     void write_pixel(int x, int y, color color);
+    void write_all_pixels(color color);
     std::string canvas_to_ppm();
     color pixel_at(int x, int y);
 };
