@@ -176,3 +176,23 @@ vector vector::cross(vector vector1, vector vector2) {
 
     return new_tuple;
 }
+
+/******************************************************************************************************
+ * Matrices
+ *******************************************************************************************************/
+int matrix4::get_rows() {
+    return rows;
+}
+
+int matrix4::get_cols() {
+    return cols;
+}
+
+void matrix4::print_matrix() {
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < cols; col++) {
+            std::cout << " " << p_matrix[row][col];
+        }
+        std::cout << "\n";
+    }
+}

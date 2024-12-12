@@ -2,8 +2,10 @@
 #define MATH_H
 
 #include <cmath>
+#include <vector>
 #include <ostream>
 #include <algorithm>
+#include <iostream>
 
 class tuple;
 class point;
@@ -89,6 +91,70 @@ public:
 
         return os;
     };
+};
+
+class matrix4 {
+private:
+    int rows, cols;
+    std::vector<std::vector<float>> p_matrix;
+
+public:
+    matrix4(int size) : rows(size), cols(size), p_matrix(size, std::vector<float>(size)) {
+        p_matrix[0][0] = size;
+        p_matrix[1][1] = size;
+        p_matrix[2][2] = size;
+        p_matrix[3][3] = size;
+    };
+
+    matrix4( float x1, float y1, float z1, float w1,
+             float x2, float y2, float z2, float w2,
+             float x3, float y3, float z3, float w3,
+             float x4, float y4, float z4, float w4 ) : rows(4), cols(4), p_matrix(4, std::vector<float>(4)) {
+
+            float nums[] = {
+                x1, y1, z1, w1,
+                x2, y2, z2, w2,
+                x3, y3, z3, w3,
+                x4, y4, z4, w4
+            };
+
+            int i = 0;
+
+            for (int row = 0; row < rows; row++) {
+                for (int col = 0; col < cols; col++) {
+                    p_matrix[row][col] = nums[i];
+                    i++;
+                }
+            }
+             };
+
+    int get_rows();
+    int get_cols();
+
+    void print_matrix();
+
+};
+
+class matrix3 : public matrix4 {
+private:
+    int rows, cols;
+    std::vector<std::vector<float>> p_matrix;
+
+public:
+    matrix3();
+    matrix3();
+
+};
+
+class matrix2 : public matrix4 {
+private:
+    int rows, cols;
+    std::vector<std::vector<float>> p_matrix;
+
+public:
+    matrix2();
+    matrix2();
+
 };
 
 #endif
