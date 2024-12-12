@@ -62,18 +62,69 @@ int main() {
     ppm_file << c.canvas_to_ppm();
     ppm_file.close();
 
-    std::cout << "Trajector saved as 'trajectory.ppm'" << std::endl;
-
-    matrix4 mat(4);
-    matrix4 mat2(
+    std::cout << "Trajectory saved as 'trajectory.ppm'" << std::endl;
+    
+    // matrix 4 test
+    matrix4 mat(6);
+    matrix4 mat4(
         1.0f, 2.0f, 3.0f, 4.0f,
         5.5f, 6.5f, 7.5f, 8.5f,
         9.0f, 10.0f, 11.0f, 12.0f,
         13.5f, 14.5f, 15.5f, 16.5f
     );
-
+    matrix4 mat42(
+        1.0f, 2.0f, 3.0f, 4.0f,
+        5.5f, 6.5f, 7.5f, 8.5f,
+        9.0f, 10.0f, 11.0f, 12.0f,
+        13.5f, 14.5f, 15.5f, 16.5f
+    );
+    
     mat.print_matrix();
+    mat4.print_matrix();
+
+    // matrix 3 test
+    matrix3 mat3(55);
+    matrix3 mat32(
+        -3.0f, 5.0f, 0.0f,
+        1.0f, -2.0f, -7.0f,
+        0.0f, 1.0f, 1.0f
+    );
+    matrix3 mat323(
+        -3.0f, 5.0f, 0.0f,
+        1.0f, -2.0f, -7.0f,
+        0.0f, 1.0f, 1.0f
+    );
+    mat3.print_matrix();
+    mat32.print_matrix();
+    
+    // matrix 2 test
+    matrix2 mat2(55);
+    matrix2 mat22(
+        -3.0f, 5.0f,
+        1.0f, -2.0f
+    );
+    matrix2 mat222(
+        -3.0f, 5.0f,
+        1.0f, -2.0f
+    );
     mat2.print_matrix();
+    mat22.print_matrix();
+
+    if (mat32 == mat323) {
+        std::cout << "Equal" << std::endl;
+    } else {
+        std::cout << "Not Equal" << std::endl;
+    }
+
+    tuple tuple1(1.0f, 2.0f, 3.0f, 0.0f);
+    vector vector1(1.0f, 2.0f, 3.0f);
+    point point1(0.0f, 2.0f, -3.0f);
+
+    if (tuple1 == point1) {
+        std::cout << "Equal" << std::endl;
+    } else {
+        std::cout << "Not Equal" << std::endl;
+    }
     
     return 0;
 }

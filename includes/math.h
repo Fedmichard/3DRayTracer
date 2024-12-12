@@ -7,17 +7,31 @@
 #include <algorithm>
 #include <iostream>
 
+// forward class declarations
 class tuple;
 class point;
 class vector;
 class color;
+class matrix4;
+class matrix3;
+class matrix2;
 
+// tuple class
 class tuple {
 private:
     float x_value, y_value, z_value, w_value; // 1.0f = Point, 0.0f = Vector
 
 public:
+    // default tuple constructor with initialization list
     tuple(float x, float y, float z, float w) : x_value(x), y_value(y), z_value(z), w_value(w) {};
+    
+    // Operator overload functions for tuples
+    bool operator==(tuple tuple);
+    tuple operator+(tuple tuple); // add 2 tuples
+    tuple operator-(tuple tuple); // subtract 2 tuples
+    tuple operator-(); // negative a tuple
+    tuple operator*(float scalar); // scalar multiplication
+    tuple operator/(float scalar); // scalar division
 
     // Getter functions for x, y, z, w values
     float getX() { return x_value; }
@@ -27,22 +41,16 @@ public:
 
     // Functions to check tuple equality
     bool isFloatEqual(float a, float b);
-    bool isTupleEqual(tuple tuple);
 
     // Functions to check whether a tuple is a vector or point
     bool isVector();
     bool isPoint();
-    
-    // Operator overload functions for tuples
-    tuple operator+(tuple tuple); // add 2 tuples
-    tuple operator-(tuple tuple); // subtract 2 tuples
-    tuple operator-(); // negative a tuple
-    tuple operator*(float scalar); // scalar multiplication
-    tuple operator/(float scalar); // scalar division
 };
 
+// point class which inherits from tuple
 class point : public tuple {
 public:
+    // default tuple constructor with initialization list
     point(float x, float y, float z) : tuple(x, y, z, 1.0f) {}
 
     // operator overloading functions
@@ -52,8 +60,10 @@ public:
     vector operator-(point point);
 };
 
+// vector class which inherits from tuple
 class vector : public tuple {
 public:
+    // default tuple constructor with initialization list
     vector(float x, float y, float z) : tuple(x, y, z, 0.0f) {}
 
     // Operator overloading
@@ -70,15 +80,17 @@ public:
     static vector cross(vector vector1, vector vector2);
 };
 
+// color class which inherits from tuple
 class color : public tuple {
 public:
+    // default tuple constructor with initialization list
     color(float r, float g, float b) : tuple(r, g, b, 1.0f) {}
 
     // operator overloading functions
     color operator+(color color);
     color operator-(color color);
     color operator*(float scalar); // scalar multiplication
-    color operator*(color color1);
+    color operator*(color color);
     color operator/(float scalar); // scalar division
 
     // handle output
@@ -93,67 +105,190 @@ public:
     };
 };
 
+// matrix 4 class
 class matrix4 {
 private:
-    int rows, cols;
+    // default amount of rows and columns inside of our matrix
+    int rows = 4;
+    int cols = 4;
+    // 2D vector array or matrix
     std::vector<std::vector<float>> p_matrix;
 
 public:
-    matrix4(int size) : rows(size), cols(size), p_matrix(size, std::vector<float>(size)) {
-        p_matrix[0][0] = size;
-        p_matrix[1][1] = size;
-        p_matrix[2][2] = size;
-        p_matrix[3][3] = size;
+    // default constructor
+    matrix4() : p_matrix(4, std::vector<float>(4)) {
+        // set every value of matrix to 0
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                p_matrix[row][col] = 0.0f; 
+            }
+        }
     };
 
+    // defines x, y, z, w diagonally
+    matrix4(int num) : p_matrix(4, std::vector<float>(4)) {
+        p_matrix[0][0] = num; // 1
+        p_matrix[1][1] = num; //    2
+        p_matrix[2][2] = num; //        3
+        p_matrix[3][3] = num; //            4
+    };
+
+    // manually input matrix
     matrix4( float x1, float y1, float z1, float w1,
              float x2, float y2, float z2, float w2,
              float x3, float y3, float z3, float w3,
-             float x4, float y4, float z4, float w4 ) : rows(4), cols(4), p_matrix(4, std::vector<float>(4)) {
+             float x4, float y4, float z4, float w4 ) : p_matrix(4, std::vector<float>(4)) {
 
-            float nums[] = {
-                x1, y1, z1, w1,
-                x2, y2, z2, w2,
-                x3, y3, z3, w3,
-                x4, y4, z4, w4
-            };
+        // number array to store all of the incoming points
+        float nums[] = {
+            x1, y1, z1, w1,
+            x2, y2, z2, w2,
+            x3, y3, z3, w3,
+            x4, y4, z4, w4
+        };
 
-            int i = 0;
+        // value for incrementing through number array
+        int i = 0;
 
-            for (int row = 0; row < rows; row++) {
-                for (int col = 0; col < cols; col++) {
-                    p_matrix[row][col] = nums[i];
-                    i++;
-                }
+        // set values of matrix
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                p_matrix[row][col] = nums[i];
+                i++;
             }
-             };
+        }
+    };
 
+    // operator overloading functions
+    bool operator==(matrix4 &matrix);
+
+    // getter functions for rows and cols
     int get_rows();
     int get_cols();
 
+    // function for matrix printing
     void print_matrix();
 
 };
 
-class matrix3 : public matrix4 {
+class matrix3 {
 private:
-    int rows, cols;
+    // default amount of rows and columns inside of our matrix
+    int rows = 3;
+    int cols = 3;
+    // 2D vector array or matrix
     std::vector<std::vector<float>> p_matrix;
 
-public:
-    matrix3();
-    matrix3();
+public: 
+    // default constructor
+    matrix3() : p_matrix(3, std::vector<float>(3)) {
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                // set every value of matrix to 0
+                p_matrix[row][col] = 0.0f;
+            }
+        }
+    };
+
+    // defines x, y, z diagonally
+    matrix3(int num) : p_matrix(3, std::vector<float>(3)) {
+        p_matrix[0][0] = num; // 1
+        p_matrix[1][1] = num; //    2
+        p_matrix[2][2] = num; //        3
+    };
+
+    // manually input matrix
+    matrix3( float x1, float y1, float z1,
+             float x2, float y2, float z2,
+             float x3, float y3, float z3 ) : p_matrix(3, std::vector<float>(3)) {
+
+        // number array to store all of the incoming points
+        float nums[] = {
+            x1, y1, z1,
+            x2, y2, z2,
+            x3, y3, z3,
+        };
+
+        // value for incrementing through number array
+        int i = 0;
+
+        // set values of matrix
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                p_matrix[row][col] = nums[i];
+                i++;
+            }
+        }
+    };
+    
+    // operator overloading functions
+    bool operator==(matrix3 &matrix);
+
+    // getter functions for rows and cols
+    int get_rows();
+    int get_cols();
+
+    // function for matrix printing
+    void print_matrix();
 
 };
 
-class matrix2 : public matrix4 {
+class matrix2 {
 private:
-    int rows, cols;
+    // default amount of rows and columns inside of our matrix
+    int rows = 2;
+    int cols = 2;
+    // 2D vector array or matrix
     std::vector<std::vector<float>> p_matrix;
-
 public:
-    matrix2();
-    matrix2();
+    // default constructor
+    matrix2() : p_matrix(2, std::vector<float>(2)) {
+        // set every value of matrix to 0
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                p_matrix[row][col] = 0.0f;
+            }
+        }
+    };
+
+    // defines x, y diagonally
+    matrix2(int num) : p_matrix(2, std::vector<float>(2)) {
+        p_matrix[0][0] = num; // 1
+        p_matrix[1][1] = num; //    2
+    };
+
+    // manually input matrix
+    matrix2( float x1, float y1,
+             float x2, float y2 ) : p_matrix(2, std::vector<float>(2)) {
+
+        // number array to store all of the incoming points
+        float nums[] = {
+            x1, y1,
+            x2, y2
+        };
+
+        // value for incrementing through number array
+        int i = 0;
+
+        // set values of matrix
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                p_matrix[row][col] = nums[i];
+                i++;
+            }
+        }
+    };
+
+    // operator overloading functions
+    bool operator==(matrix2& matrix);
+    matrix2 operator*(matrix2& matrix);
+
+    // getter functions for rows and cols
+    int get_rows();
+    int get_cols();
+
+    // function for matrix printing
+    void print_matrix();
 
 };
 

@@ -13,7 +13,7 @@ bool tuple::isFloatEqual(float a, float b) {
     }
 }
 
-bool tuple::isTupleEqual(tuple tuple1)  {
+bool tuple::operator==(tuple tuple1)  {
     if (isFloatEqual(x_value, tuple1.x_value)) {
         if (isFloatEqual(y_value, tuple1.y_value)) {
             if (isFloatEqual(z_value, tuple1.z_value)) {
@@ -180,6 +180,7 @@ vector vector::cross(vector vector1, vector vector2) {
 /******************************************************************************************************
  * Matrices
  *******************************************************************************************************/
+// matrix4
 int matrix4::get_rows() {
     return rows;
 }
@@ -195,4 +196,106 @@ void matrix4::print_matrix() {
         }
         std::cout << "\n";
     }
+}
+
+bool matrix4::operator==(matrix4 &matrix) {
+    float e = 0.00001;
+
+    if (rows != matrix.get_rows() || cols != matrix.get_cols()) {
+        return false;
+    }
+
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < cols; col++) {
+            if (p_matrix[row][col] - matrix.p_matrix[row][col] > e) {
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
+
+// matrix3
+int matrix3::get_rows() {
+    return rows;
+}
+
+int matrix3::get_cols() {
+    return cols;
+}
+
+void matrix3::print_matrix() {
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < cols; col++) {
+            std::cout << " " << p_matrix[row][col];
+        }
+        std::cout << "\n";
+    }
+}
+
+bool matrix3::operator==(matrix3 &matrix) {
+    float e = 0.00001;
+
+    if (rows != matrix.get_rows() || cols != matrix.get_cols()) {
+        return false;
+    }
+
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < cols; col++) {
+            if (p_matrix[row][col] - matrix.p_matrix[row][col] > e) {
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
+
+// matrix2
+int matrix2::get_rows() {
+    return rows;
+}
+
+int matrix2::get_cols() {
+    return cols;
+}
+
+void matrix2::print_matrix() {
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < cols; col++) {
+            std::cout << " " << p_matrix[row][col];
+        }
+        std::cout << "\n";
+    }
+}
+
+bool matrix2::operator==(matrix2& matrix) {
+    float e = 0.00001;
+
+    if (rows != matrix.get_rows() || cols != matrix.get_cols()) {
+        return false;
+    }
+
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < cols; col++) {
+            if (p_matrix[row][col] - matrix.p_matrix[row][col] > e) {
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
+
+matrix2 matrix2::operator*(matrix2& matrix) {
+    matrix2 m;
+
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < cols; col++) {
+            // m.p_matrix[row][col] = p_matrix;
+        }
+    }
+
+    return m;
 }
