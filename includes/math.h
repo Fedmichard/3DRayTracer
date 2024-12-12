@@ -45,6 +45,9 @@ public:
     // Functions to check whether a tuple is a vector or point
     bool isVector();
     bool isPoint();
+
+    // print a tuple formatted
+    void printTuple();
 };
 
 // point class which inherits from tuple
@@ -160,7 +163,9 @@ public:
     };
 
     // operator overloading functions
-    bool operator==(matrix4 &matrix);
+    bool operator==(matrix4& matrix);
+    matrix4 operator*(matrix4& matrix);
+    tuple operator*(tuple& tuple); // multiplying matrix by a tuple
 
     // getter functions for rows and cols
     int get_rows();
@@ -223,6 +228,7 @@ public:
     
     // operator overloading functions
     bool operator==(matrix3 &matrix);
+    matrix3 operator*(matrix3& matrix);
 
     // getter functions for rows and cols
     int get_rows();

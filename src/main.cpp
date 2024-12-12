@@ -125,6 +125,32 @@ int main() {
     } else {
         std::cout << "Not Equal" << std::endl;
     }
+
+    matrix2 A(
+        1, 2, 
+        5, 6
+    );
+
+    matrix2 B(
+        -2, 1,
+         3, 2
+    );
+
+    matrix2 C = A * B;
+    C.print_matrix();
+
+    matrix4 ttt(
+        1, 2, 3, 4,
+        2, 4, 4, 2,
+        8, 6, 4, 1, 
+        0, 0, 0, 1
+    );
+
+    tuple bb(1, 2, 3, 1);
+
+    vector vv(1, 2, 3);
+    point pp(1, 2, 3);
+
     
     return 0;
 }

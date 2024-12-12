@@ -90,6 +90,10 @@ tuple tuple::operator/(float scalar) {
     return new_tuple;
 } 
 
+void tuple::printTuple() {
+    std::cout << "{ " << getX() << ", " << getY() << ", " << getZ() << ", " << getW() << " }" << std::endl;
+}
+
 /******************************************************************************************************
  * Point overload functions
  *******************************************************************************************************/
@@ -216,6 +220,34 @@ bool matrix4::operator==(matrix4 &matrix) {
     return true;
 }
 
+matrix4 matrix4::operator*(matrix4& matrix) {
+    matrix4 m;
+
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < cols; col++) {
+            m.p_matrix[row][col] = p_matrix[row][0] * matrix.p_matrix[0][col] +
+                                   p_matrix[row][1] * matrix.p_matrix[1][col] +
+                                   p_matrix[row][2] * matrix.p_matrix[2][col] +
+                                   p_matrix[row][3] * matrix.p_matrix[3][col];
+        }
+    }
+
+    return m;
+}
+
+tuple matrix4::operator*(tuple& t) {
+    float x = p_matrix[0][0] * t.getX() + p_matrix[0][1] * t.getY() +
+                p_matrix[0][2] * t.getZ() + p_matrix[0][3] * t.getW();
+    float y = p_matrix[1][0] * t.getX() + p_matrix[1][1] * t.getY() +
+                p_matrix[1][2] * t.getZ() + p_matrix[1][3] * t.getW();
+    float z = p_matrix[2][0] * t.getX() + p_matrix[2][1] * t.getY() +
+                p_matrix[2][2] * t.getZ() + p_matrix[2][3] * t.getW();
+    float w = p_matrix[3][0] * t.getX() + p_matrix[3][1] * t.getY() +
+                p_matrix[3][2] * t.getZ() + p_matrix[3][3] * t.getW();
+
+    return tuple(x, y, z, w);
+}
+
 // matrix3
 int matrix3::get_rows() {
     return rows;
@@ -250,6 +282,20 @@ bool matrix3::operator==(matrix3 &matrix) {
     }
 
     return true;
+}
+
+matrix3 matrix3::operator*(matrix3& matrix) {
+    matrix3 m;
+
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < cols; col++) {
+            m.p_matrix[row][col] = p_matrix[row][0] * matrix.p_matrix[0][col] +
+                                   p_matrix[row][1] * matrix.p_matrix[1][col] +
+                                   p_matrix[row][2] * matrix.p_matrix[2][col];
+        }
+    }
+
+    return m;
 }
 
 // matrix2
@@ -293,7 +339,8 @@ matrix2 matrix2::operator*(matrix2& matrix) {
 
     for (int row = 0; row < rows; row++) {
         for (int col = 0; col < cols; col++) {
-            // m.p_matrix[row][col] = p_matrix;
+            m.p_matrix[row][col] = p_matrix[row][0] * matrix.p_matrix[0][col] +
+                                   p_matrix[row][1] * matrix.p_matrix[1][col];
         }
     }
 
