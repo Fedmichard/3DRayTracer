@@ -140,17 +140,47 @@ int main() {
     C.print_matrix();
 
     matrix4 ttt(
-        1, 2, 3, 4,
-        2, 4, 4, 2,
-        8, 6, 4, 1, 
-        0, 0, 0, 1
+        0, 9, 3, 0,
+        9, 8, 0, 8,
+        1, 8, 5, 3,
+        0, 0, 5, 8
     );
+    
+    ttt.print_matrix();
 
     tuple bb(1, 2, 3, 1);
 
     vector vv(1, 2, 3);
     point pp(1, 2, 3);
+    
+    matrix4 transpotedTTT = ttt.transpose();
+
+    transpotedTTT.print_matrix();
 
     
+    matrix3 t3(
+        0, 9, 3,
+        9, 8, 0,
+        1, 8, 5
+    );
+
+    matrix3 transposedT3 = t3.transpose();
+
+    matrix2 t2(
+         1, 5,
+        -3, 2
+    );
+
+    matrix2 transposedT2 = t2.transpose();
+
+    t3.print_matrix();
+    transposedT3.print_matrix();
+    t2.print_matrix();
+    transposedT2.print_matrix();
+    
+    ttt.identityMatrix().print_matrix();
+    ttt.identityMatrix().transpose().print_matrix();
+
+    std::cout << "Determinant: " << t2.determinant() << std::endl;
     return 0;
 }

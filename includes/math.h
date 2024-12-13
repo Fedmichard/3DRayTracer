@@ -171,9 +171,16 @@ public:
     int get_rows();
     int get_cols();
 
+    // setter functions for elements
+    void setElement();
+
     // function for matrix printing
     void print_matrix();
 
+    // identity matrix
+    matrix4 identityMatrix();
+    matrix4 transpose();
+    matrix3 submatrix(int row, int col);
 };
 
 class matrix3 {
@@ -234,9 +241,15 @@ public:
     int get_rows();
     int get_cols();
 
+    // setter functions for elements
+    void setElement();
+
     // function for matrix printing
     void print_matrix();
-
+    
+    // identity matrix
+    matrix3 identityMatrix();
+    matrix3 transpose();
 };
 
 class matrix2 {
@@ -293,8 +306,16 @@ public:
     int get_rows();
     int get_cols();
 
-    // function for matrix printing
-    void print_matrix();
+    // setter functions for elements
+    void setElement();
+
+    // functions
+    void print_matrix(); // function for matrix printing
+    
+    matrix2 identityMatrix(); // identity matrix
+    matrix2 transpose();
+
+    float determinant();
 
 };
 

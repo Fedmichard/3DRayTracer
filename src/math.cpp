@@ -182,15 +182,18 @@ vector vector::cross(vector vector1, vector vector2) {
 }
 
 /******************************************************************************************************
- * Matrices
+ * Matrix 4
  *******************************************************************************************************/
-// matrix4
 int matrix4::get_rows() {
     return rows;
 }
 
 int matrix4::get_cols() {
     return cols;
+}
+
+void matrix4::setElement() {
+    // need to code
 }
 
 void matrix4::print_matrix() {
@@ -248,13 +251,50 @@ tuple matrix4::operator*(tuple& t) {
     return tuple(x, y, z, w);
 }
 
-// matrix3
+
+matrix4 matrix4::identityMatrix() {
+    return matrix4(1.0f);
+}
+
+matrix4 matrix4::transpose() {
+    matrix4 transposed;
+
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < cols; col++) {
+            transposed.p_matrix[col][row] = p_matrix[row][col];
+        }
+    }
+
+    return transposed;
+}
+
+matrix3 matrix4::submatrix(int row, int col) {
+    matrix3 mat;
+
+    for (int r = 0; r < rows; r++) {
+        if (r == row) {r++;}
+        for (int c = 0; c < cols; c++) {
+            if (c == col) {c++;}
+            mat.p_matrix[r][c] = p_matrix[r][c];
+        }
+    }
+
+    return mat;
+}
+
+/******************************************************************************************************
+ * Matrix3
+ *******************************************************************************************************/
 int matrix3::get_rows() {
     return rows;
 }
 
 int matrix3::get_cols() {
     return cols;
+}
+
+void matrix3::setElement() {
+    // need to code
 }
 
 void matrix3::print_matrix() {
@@ -298,13 +338,30 @@ matrix3 matrix3::operator*(matrix3& matrix) {
     return m;
 }
 
-// matrix2
+matrix3 matrix3::transpose() {
+    matrix3 transposed;
+
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < cols; col++) {
+            transposed.p_matrix[col][row] = p_matrix[row][col];
+        }
+    }
+
+    return transposed;
+}
+/******************************************************************************************************
+ * Matrix2
+ *******************************************************************************************************/
 int matrix2::get_rows() {
     return rows;
 }
 
 int matrix2::get_cols() {
     return cols;
+}
+
+void matrix2::setElement() {
+    // need to code
 }
 
 void matrix2::print_matrix() {
@@ -345,4 +402,20 @@ matrix2 matrix2::operator*(matrix2& matrix) {
     }
 
     return m;
+}
+
+matrix2 matrix2::transpose() {
+    matrix2 transposed;
+
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < cols; col++) {
+            transposed.p_matrix[col][row] = p_matrix[row][col];
+        }
+    }
+
+    return transposed;
+}
+
+float matrix2::determinant() {
+    return p_matrix[0][0] * p_matrix[1][1] - p_matrix[1][0] * p_matrix[0][1];
 }
