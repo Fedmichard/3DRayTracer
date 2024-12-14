@@ -140,10 +140,10 @@ int main() {
     C.print_matrix();
 
     matrix4 ttt(
-        0, 9, 3, 0,
-        9, 8, 0, 8,
-        1, 8, 5, 3,
-        0, 0, 5, 8
+        -6, 1, 1, 6,
+        -8, 5, 8, 6,
+        -1, 0, 8, 2,
+        -7, 1, -1, 1
     );
     
     ttt.print_matrix();
@@ -157,30 +157,52 @@ int main() {
 
     transpotedTTT.print_matrix();
 
-    
-    matrix3 t3(
-        0, 9, 3,
-        9, 8, 0,
-        1, 8, 5
-    );
-
-    matrix3 transposedT3 = t3.transpose();
-
     matrix2 t2(
          1, 5,
         -3, 2
+    ); 
+    
+    matrix3 t3(
+         1, 2, 6,
+        -5, 8, -4,
+         2, 6, 4
     );
 
-    matrix2 transposedT2 = t2.transpose();
+    std::cout << "XXXXXXXXXXXXXXXXXXX" << std::endl;
+    std::cout << "cofactor(0,0): " << t3.cofactor(0, 0) << std::endl;
+    std::cout << "cofactor(0,1): " << t3.cofactor(0, 1) << std::endl;
+    std::cout << "cofactor(0,2): " << t3.cofactor(0, 2) << std::endl;
+    std::cout << "Determinant: " << t3.determinant() << std::endl;
+    std::cout << "XXXXXXXXXXXXXXXXXXX" << std::endl;
 
-    t3.print_matrix();
-    transposedT3.print_matrix();
-    t2.print_matrix();
-    transposedT2.print_matrix();
-    
-    ttt.identityMatrix().print_matrix();
-    ttt.identityMatrix().transpose().print_matrix();
+    matrix4 t4(
+        -2, -8, 3, 5,
+        -3, 1, 7, 3,
+         1, 2, -9, 6,
+        -6, 7, 7, -9
+    );
 
-    std::cout << "Determinant: " << t2.determinant() << std::endl;
+    std::cout << "XXXXXXXXXXXXXXXXXXX" << std::endl;
+    std::cout << "cofactor(0,0): " << t4.cofactor(0, 0) << std::endl;
+    std::cout << "cofactor(0,1): " << t4.cofactor(0, 1) << std::endl;
+    std::cout << "cofactor(0,2): " << t4.cofactor(0, 2) << std::endl;
+    std::cout << "cofactor(0,3): " << t4.cofactor(0, 3) << std::endl;
+    std::cout << "Determinant: " << t4.determinant() << std::endl;
+    std::cout << "XXXXXXXXXXXXXXXXXXX" << std::endl;
+
+    matrix4 AA(
+        3, -9, 7, 3,
+        3, -8, 2, -9,
+        -4, 4, 4, 1,
+        -6, 5, -1, 1
+    );
+
+    AA.print_matrix();
+    matrix4 inverted = AA.inverse();
+    inverted.print_matrix();
+
+    matrix4 neww = AA * inverted;
+    neww.print_matrix();
+
     return 0;
 }

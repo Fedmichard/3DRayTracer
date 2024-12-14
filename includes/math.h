@@ -172,7 +172,10 @@ public:
     int get_cols();
 
     // setter functions for elements
-    void setElement();
+    void setElement(int row, int col, float value);
+
+    // check if matrix is invertible
+    bool isInvertible();
 
     // function for matrix printing
     void print_matrix();
@@ -180,7 +183,11 @@ public:
     // identity matrix
     matrix4 identityMatrix();
     matrix4 transpose();
+    matrix4 inverse();
     matrix3 submatrix(int row, int col);
+    float minor(int row, int col);
+    float cofactor(int row, int col);
+    float determinant();
 };
 
 class matrix3 {
@@ -242,7 +249,10 @@ public:
     int get_cols();
 
     // setter functions for elements
-    void setElement();
+    void setElement(int row, int col, float value);
+
+    // check if matrix is invertible
+    bool isInvertible();
 
     // function for matrix printing
     void print_matrix();
@@ -250,6 +260,11 @@ public:
     // identity matrix
     matrix3 identityMatrix();
     matrix3 transpose();
+    matrix3 inverse();
+    matrix2 submatrix(int row, int col);
+    float minor(int row, int col);
+    float cofactor(int row, int col);
+    float determinant();
 };
 
 class matrix2 {
@@ -307,7 +322,10 @@ public:
     int get_cols();
 
     // setter functions for elements
-    void setElement();
+    void setElement(int row, int col, float value);
+
+    // check if matrix is invertible
+    bool isInvertible();
 
     // functions
     void print_matrix(); // function for matrix printing

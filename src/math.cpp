@@ -192,8 +192,16 @@ int matrix4::get_cols() {
     return cols;
 }
 
-void matrix4::setElement() {
-    // need to code
+void matrix4::setElement(int row, int col, float value) {
+    p_matrix[row][col] = value;
+}
+
+bool matrix4::isInvertible() {
+    if (determinant() == 0) {
+        return false;
+    }
+
+    return true;
 }
 
 void matrix4::print_matrix() {
@@ -268,18 +276,59 @@ matrix4 matrix4::transpose() {
     return transposed;
 }
 
+matrix4 matrix4::inverse() {
+    matrix4 mat;
+
+    if (!isInvertible()) {
+        return mat;
+    } else {
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                mat.p_matrix[row][col] = cofactor(row, col) / determinant();
+            }
+        }
+
+        return mat.transpose();
+    }
+}
+
 matrix3 matrix4::submatrix(int row, int col) {
     matrix3 mat;
 
+    int r_sub = 0;
     for (int r = 0; r < rows; r++) {
-        if (r == row) {r++;}
+        if (r == row) continue;
+
+        int c_sub = 0;
         for (int c = 0; c < cols; c++) {
-            if (c == col) {c++;}
-            mat.p_matrix[r][c] = p_matrix[r][c];
+            if (c == col) continue;
+
+            mat.setElement(r_sub, c_sub, p_matrix[r][c]);
+            c_sub++;
         }
+        r_sub++;
     }
 
     return mat;
+}
+
+float matrix4::minor(int row, int col) {
+    return submatrix(row, col).determinant();
+}
+
+float matrix4::cofactor(int row, int col) {
+    if ((row + col) % 2 != 0) {
+        return -minor(row, col);
+    }
+
+    else return minor(row, col);
+}
+
+float matrix4::determinant() {
+    return p_matrix[1][0] * cofactor(1, 0) +
+           p_matrix[1][1] * cofactor(1, 1) +
+           p_matrix[1][2] * cofactor(1, 2) +
+           p_matrix[1][3] * cofactor(1, 3);
 }
 
 /******************************************************************************************************
@@ -293,8 +342,16 @@ int matrix3::get_cols() {
     return cols;
 }
 
-void matrix3::setElement() {
-    // need to code
+void matrix3::setElement(int row, int col, float value) {
+    p_matrix[row][col] = value;
+}
+
+bool matrix3::isInvertible() {
+    if (determinant() == 0) {
+        return false;
+    }
+
+    return true;
 }
 
 void matrix3::print_matrix() {
@@ -349,6 +406,61 @@ matrix3 matrix3::transpose() {
 
     return transposed;
 }
+
+matrix3 matrix3::inverse() {
+    matrix3 mat;
+
+    if (!isInvertible()) {
+        return mat;
+    } else {
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                mat.p_matrix[row][col] = cofactor(row, col) / determinant();
+            }
+        }
+
+        return mat.transpose();
+    }
+}
+
+matrix2 matrix3::submatrix(int row, int col) {
+    matrix2 mat;
+
+    int r_sub = 0;
+    for (int r = 0; r < rows; r++) {
+        if (r == row) continue;
+
+        int c_sub = 0;
+        for (int c = 0; c < cols; c++) {
+            if (c == col) continue;
+
+            mat.setElement(r_sub, c_sub, p_matrix[r][c]);
+            c_sub++;
+        }
+        r_sub++;
+    }
+
+    return mat;
+}
+
+float matrix3::minor(int row, int col) {
+    return submatrix(row, col).determinant();
+}
+
+float matrix3::cofactor(int row, int col) {
+    if ((row + col) % 2 != 0) {
+        return -minor(row, col);
+    }
+
+    else return minor(row, col);
+}
+
+float matrix3::determinant() {
+    return p_matrix[1][0] * cofactor(1, 0) +
+           p_matrix[1][1] * cofactor(1, 1) +
+           p_matrix[1][2] * cofactor(1, 2);
+}
+
 /******************************************************************************************************
  * Matrix2
  *******************************************************************************************************/
@@ -360,8 +472,16 @@ int matrix2::get_cols() {
     return cols;
 }
 
-void matrix2::setElement() {
-    // need to code
+void matrix2::setElement(int row, int col, float value) {
+    p_matrix[row][col] = value;
+}
+
+bool matrix2::isInvertible() {
+    if (determinant() == 0) {
+        return false;
+    }
+
+    return true;
 }
 
 void matrix2::print_matrix() {
