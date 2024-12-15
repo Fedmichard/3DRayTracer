@@ -193,6 +193,7 @@ public:
 
     // Transformations
     static matrix4 translation(float x, float y, float z);
+    static matrix4 scaling(float x, float y, float z);
 };
 
 class matrix3 {

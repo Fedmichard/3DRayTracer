@@ -361,6 +361,16 @@ matrix4 matrix4::translation(float x, float y, float z) {
     return t;
 }
 
+matrix4 matrix4::scaling(float x, float y, float z) {
+    matrix4 t = identityMatrix();
+
+    t.p_matrix[0][0] = x;
+    t.p_matrix[1][1] = y;
+    t.p_matrix[2][2] = z;
+
+    return t;
+}
+
 /******************************************************************************************************
  * Matrix3
  *******************************************************************************************************/

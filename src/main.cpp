@@ -215,5 +215,11 @@ int main() {
     
     addition.printTuple();
 
+    matrix4 scale = matrix4::scaling(-1, 1, 1);
+    point nep(2, 3, 4);
+
+    point anotha = scale * nep;
+    anotha.printTuple();
+
     return 0;
 }
