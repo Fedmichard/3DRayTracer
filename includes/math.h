@@ -166,6 +166,8 @@ public:
     bool operator==(matrix4& matrix);
     matrix4 operator*(matrix4& matrix);
     tuple operator*(tuple& tuple); // multiplying matrix by a tuple
+    point operator*(point& tuple); // multiplying matrix by a tuple
+    vector operator*(vector& tuple); // multiplying matrix by a tuple
 
     // getter functions for rows and cols
     int get_rows();
@@ -180,14 +182,17 @@ public:
     // function for matrix printing
     void print_matrix();
 
-    // identity matrix
-    matrix4 identityMatrix();
+    // Math Functions
+    static matrix4 identityMatrix();
     matrix4 transpose();
     matrix4 inverse();
     matrix3 submatrix(int row, int col);
     float minor(int row, int col);
     float cofactor(int row, int col);
     float determinant();
+
+    // Transformations
+    static matrix4 translation(float x, float y, float z);
 };
 
 class matrix3 {

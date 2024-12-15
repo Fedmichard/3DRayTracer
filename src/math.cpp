@@ -259,6 +259,26 @@ tuple matrix4::operator*(tuple& t) {
     return tuple(x, y, z, w);
 }
 
+point matrix4::operator*(point& t) {
+    float x = p_matrix[0][0] * t.getX() + p_matrix[0][1] * t.getY() +
+                p_matrix[0][2] * t.getZ() + p_matrix[0][3] * t.getW();
+    float y = p_matrix[1][0] * t.getX() + p_matrix[1][1] * t.getY() +
+                p_matrix[1][2] * t.getZ() + p_matrix[1][3] * t.getW();
+    float z = p_matrix[2][0] * t.getX() + p_matrix[2][1] * t.getY() +
+                p_matrix[2][2] * t.getZ() + p_matrix[2][3] * t.getW();
+    return point(x, y, z);
+}
+
+vector matrix4::operator*(vector& t) {
+    float x = p_matrix[0][0] * t.getX() + p_matrix[0][1] * t.getY() +
+                p_matrix[0][2] * t.getZ() + p_matrix[0][3] * t.getW();
+    float y = p_matrix[1][0] * t.getX() + p_matrix[1][1] * t.getY() +
+                p_matrix[1][2] * t.getZ() + p_matrix[1][3] * t.getW();
+    float z = p_matrix[2][0] * t.getX() + p_matrix[2][1] * t.getY() +
+                p_matrix[2][2] * t.getZ() + p_matrix[2][3] * t.getW();
+
+    return vector(x, y, z);
+}
 
 matrix4 matrix4::identityMatrix() {
     return matrix4(1.0f);
@@ -329,6 +349,16 @@ float matrix4::determinant() {
            p_matrix[1][1] * cofactor(1, 1) +
            p_matrix[1][2] * cofactor(1, 2) +
            p_matrix[1][3] * cofactor(1, 3);
+}
+
+matrix4 matrix4::translation(float x, float y, float z) {
+    matrix4 t = identityMatrix();
+
+    t.p_matrix[0][3] = x;
+    t.p_matrix[1][3] = y;
+    t.p_matrix[2][3] = z;
+
+    return t;
 }
 
 /******************************************************************************************************

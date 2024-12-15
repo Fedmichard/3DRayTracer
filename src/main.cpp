@@ -204,5 +204,16 @@ int main() {
     matrix4 neww = AA * inverted;
     neww.print_matrix();
 
+    matrix4 translation = matrix4::translation(5, -3, 2);
+    matrix4 inverse = translation.inverse();
+    vector vvv(-3, 4, 5);
+
+    translation.print_matrix();
+    vvv.printTuple();
+
+    vector addition = translation * vvv;
+    
+    addition.printTuple();
+
     return 0;
 }
