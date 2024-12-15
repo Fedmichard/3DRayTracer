@@ -15,10 +15,6 @@ int main() {
     color color1(0.0f, 1.0f, 1.0f);
     point twelve(0, 0, 1);
 
-    // Projectile 
-    vector velocity(1.0f, 1.8f, 0.0f);
-    velocity.normalize() * 11.25f;
-
     for (int hour = 0; hour < 12; ++hour) {
         double angle = hour * M_PI / 6; // Rotation angle (π/6 radians per hour)
         matrix4 rotation = matrix4::rotation_y(angle); // Y-axis rotation matrix
