@@ -204,6 +204,7 @@ public:
     static matrix4 rotation_x(double radians);
     static matrix4 rotation_y(double radians);
     static matrix4 rotation_z(double radians);
+    static matrix4 shearing(float xy, float xz, float yx, float yz, float zx, float zy);
 };
 
 class matrix3 {

@@ -420,6 +420,19 @@ matrix4 matrix4::rotation_z(double radians) {
     return t;
 }
 
+matrix4 matrix4::shearing(float xy, float xz, float yx, float yz, float zx, float zy) {
+    matrix4 t = identityMatrix();
+
+    t.p_matrix[0][1] = xy;
+    t.p_matrix[0][2] = xz;
+    t.p_matrix[1][0] = yx;
+    t.p_matrix[1][2] = yz;
+    t.p_matrix[2][0] = zx;
+    t.p_matrix[2][1] = zy;
+
+    return t;
+}
+
 /******************************************************************************************************
  * Matrix3
  *******************************************************************************************************/
