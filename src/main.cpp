@@ -221,5 +221,14 @@ int main() {
     point anotha = scale * nep;
     anotha.printTuple();
 
+    point ppp(0, 1, 0);
+    matrix4 half_quarter = matrix4::rotation_z(M_PI / 4);
+    matrix4 full_quarter = matrix4::rotation_z(M_PI / 2);
+
+    std::cout << "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" << std::endl;
+
+    point rot_x = full_quarter * ppp;
+    rot_x.printTuple();
+
     return 0;
 }

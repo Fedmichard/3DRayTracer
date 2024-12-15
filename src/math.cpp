@@ -1,6 +1,13 @@
 #include "math.h"
 
 /******************************************************************************************************
+ * Math functions
+ *******************************************************************************************************/
+double math::sanitize(double value) {
+    return std::abs(value) < EPSILON ? 0.0 : value;
+}
+
+/******************************************************************************************************
  * Tuple functions
  *******************************************************************************************************/
 bool tuple::isFloatEqual(float a, float b) {
@@ -367,6 +374,48 @@ matrix4 matrix4::scaling(float x, float y, float z) {
     t.p_matrix[0][0] = x;
     t.p_matrix[1][1] = y;
     t.p_matrix[2][2] = z;
+
+    return t;
+}
+
+matrix4 matrix4::rotation_x(double radians) {
+    matrix4 t = identityMatrix();
+
+    const double cos = std::cos(radians);
+    const double sin = std::sin(radians);
+
+    t.p_matrix[1][1] = math::sanitize(cos);
+    t.p_matrix[1][2] = math::sanitize(-sin);
+    t.p_matrix[2][1] = math::sanitize(sin);
+    t.p_matrix[2][2] = math::sanitize(cos);
+
+    return t;
+}
+
+matrix4 matrix4::rotation_y(double radians) {
+    matrix4 t = identityMatrix();
+
+    const double cos = std::cos(radians);
+    const double sin = std::sin(radians);
+
+    t.p_matrix[0][0] = math::sanitize(cos);
+    t.p_matrix[0][2] = math::sanitize(sin);
+    t.p_matrix[2][0] = math::sanitize(-sin);
+    t.p_matrix[2][2] = math::sanitize(cos);
+
+    return t;
+}
+
+matrix4 matrix4::rotation_z(double radians) {
+    matrix4 t = identityMatrix();
+
+    const double cos = std::cos(radians);
+    const double sin = std::sin(radians);
+
+    t.p_matrix[0][0] = math::sanitize(cos);
+    t.p_matrix[0][1] = math::sanitize(-sin);
+    t.p_matrix[1][0] = math::sanitize(sin);
+    t.p_matrix[1][1] = math::sanitize(cos);
 
     return t;
 }

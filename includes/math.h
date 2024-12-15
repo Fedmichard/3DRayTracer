@@ -16,6 +16,13 @@ class matrix4;
 class matrix3;
 class matrix2;
 
+constexpr double EPSILON = 1e-6;
+
+class math {
+public:
+    static double sanitize(double value);
+};
+
 // tuple class
 class tuple {
 private:
@@ -194,6 +201,9 @@ public:
     // Transformations
     static matrix4 translation(float x, float y, float z);
     static matrix4 scaling(float x, float y, float z);
+    static matrix4 rotation_x(double radians);
+    static matrix4 rotation_y(double radians);
+    static matrix4 rotation_z(double radians);
 };
 
 class matrix3 {
