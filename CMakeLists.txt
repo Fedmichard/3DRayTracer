@@ -5,4 +5,4 @@ set(CMAKE_CXX_STANDARD 17)
 
 include_directories(includes)
 
-add_executable(3d_raytracer_cpp src/main.cpp src/math.cpp src/canvas.cpp)
+add_executable(3d_raytracer_cpp src/main.cpp src/math.cpp src/canvas.cpp src/ray.cpp)

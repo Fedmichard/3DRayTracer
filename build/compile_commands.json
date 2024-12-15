@@ -16,5 +16,11 @@
   "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/3d_raytracer_cpp.dir/includes_CXX.rsp -g -o CMakeFiles\\3d_raytracer_cpp.dir\\src\\canvas.cpp.obj -c C:\\Users\\franc\\Documents\\Personal_Projects\\3DRayTracer\\src\\canvas.cpp",
   "file": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/canvas.cpp",
   "output": "CMakeFiles/3d_raytracer_cpp.dir/src/canvas.cpp.obj"
+},
+{
+  "directory": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/3d_raytracer_cpp.dir/includes_CXX.rsp -g -o CMakeFiles\\3d_raytracer_cpp.dir\\src\\ray.cpp.obj -c C:\\Users\\franc\\Documents\\Personal_Projects\\3DRayTracer\\src\\ray.cpp",
+  "file": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/ray.cpp",
+  "output": "CMakeFiles/3d_raytracer_cpp.dir/src/ray.cpp.obj"
 }
 ]

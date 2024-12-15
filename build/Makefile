@@ -200,6 +200,30 @@ src/math.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/math.cpp.s
 .PHONY : src/math.cpp.s
 
+src/ray.obj: src/ray.cpp.obj
+.PHONY : src/ray.obj
+
+# target to build an object file
+src/ray.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/ray.cpp.obj
+.PHONY : src/ray.cpp.obj
+
+src/ray.i: src/ray.cpp.i
+.PHONY : src/ray.i
+
+# target to preprocess a source file
+src/ray.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/ray.cpp.i
+.PHONY : src/ray.cpp.i
+
+src/ray.s: src/ray.cpp.s
+.PHONY : src/ray.s
+
+# target to generate assembly for a file
+src/ray.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/ray.cpp.s
+.PHONY : src/ray.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -218,6 +242,9 @@ help:
 	@echo ... src/math.obj
 	@echo ... src/math.i
 	@echo ... src/math.s
+	@echo ... src/ray.obj
+	@echo ... src/ray.i
+	@echo ... src/ray.s
 .PHONY : help
 
 

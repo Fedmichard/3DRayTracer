@@ -8,6 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/3d_raytracer_cpp.dir/src/main.cpp.obj.d"
   "CMakeFiles/3d_raytracer_cpp.dir/src/math.cpp.obj"
   "CMakeFiles/3d_raytracer_cpp.dir/src/math.cpp.obj.d"
+  "CMakeFiles/3d_raytracer_cpp.dir/src/ray.cpp.obj"
+  "CMakeFiles/3d_raytracer_cpp.dir/src/ray.cpp.obj.d"
   "lib3d_raytracer_cpp.dll.a"
 )
 

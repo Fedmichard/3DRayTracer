@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/canvas.cpp" "CMakeFiles/3d_raytracer_cpp.dir/src/canvas.cpp.obj" "gcc" "CMakeFiles/3d_raytracer_cpp.dir/src/canvas.cpp.obj.d"
   "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/main.cpp" "CMakeFiles/3d_raytracer_cpp.dir/src/main.cpp.obj" "gcc" "CMakeFiles/3d_raytracer_cpp.dir/src/main.cpp.obj.d"
   "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/math.cpp" "CMakeFiles/3d_raytracer_cpp.dir/src/math.cpp.obj" "gcc" "CMakeFiles/3d_raytracer_cpp.dir/src/math.cpp.obj.d"
+  "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/ray.cpp" "CMakeFiles/3d_raytracer_cpp.dir/src/ray.cpp.obj" "gcc" "CMakeFiles/3d_raytracer_cpp.dir/src/ray.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
