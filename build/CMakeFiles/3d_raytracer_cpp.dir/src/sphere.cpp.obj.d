@@ -1,5 +1,6 @@
-CMakeFiles/3d_raytracer_cpp.dir/src/ray.cpp.obj: \
- C:\Users\franc\Documents\Personal_Projects\3DRayTracer\src\ray.cpp \
+CMakeFiles/3d_raytracer_cpp.dir/src/sphere.cpp.obj: \
+ C:\Users\franc\Documents\Personal_Projects\3DRayTracer\src\sphere.cpp \
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/sphere.h \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/ray.h \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/math.h \
  C:/msys64/mingw64/include/c++/14.1.0/cmath \
@@ -170,4 +171,5 @@ CMakeFiles/3d_raytracer_cpp.dir/src/ray.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.1.0/pstl/execution_defs.h \
  C:/msys64/mingw64/include/c++/14.1.0/iostream \
  C:/msys64/mingw64/include/c++/14.1.0/istream \
- C:/msys64/mingw64/include/c++/14.1.0/bits/istream.tcc
+ C:/msys64/mingw64/include/c++/14.1.0/bits/istream.tcc \
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/intersection.h

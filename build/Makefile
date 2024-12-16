@@ -152,6 +152,30 @@ src/canvas.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/canvas.cpp.s
 .PHONY : src/canvas.cpp.s
 
+src/intersection.obj: src/intersection.cpp.obj
+.PHONY : src/intersection.obj
+
+# target to build an object file
+src/intersection.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/intersection.cpp.obj
+.PHONY : src/intersection.cpp.obj
+
+src/intersection.i: src/intersection.cpp.i
+.PHONY : src/intersection.i
+
+# target to preprocess a source file
+src/intersection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/intersection.cpp.i
+.PHONY : src/intersection.cpp.i
+
+src/intersection.s: src/intersection.cpp.s
+.PHONY : src/intersection.s
+
+# target to generate assembly for a file
+src/intersection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/intersection.cpp.s
+.PHONY : src/intersection.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -224,6 +248,30 @@ src/ray.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/ray.cpp.s
 .PHONY : src/ray.cpp.s
 
+src/sphere.obj: src/sphere.cpp.obj
+.PHONY : src/sphere.obj
+
+# target to build an object file
+src/sphere.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/sphere.cpp.obj
+.PHONY : src/sphere.cpp.obj
+
+src/sphere.i: src/sphere.cpp.i
+.PHONY : src/sphere.i
+
+# target to preprocess a source file
+src/sphere.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/sphere.cpp.i
+.PHONY : src/sphere.cpp.i
+
+src/sphere.s: src/sphere.cpp.s
+.PHONY : src/sphere.s
+
+# target to generate assembly for a file
+src/sphere.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/sphere.cpp.s
+.PHONY : src/sphere.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -236,6 +284,9 @@ help:
 	@echo ... src/canvas.obj
 	@echo ... src/canvas.i
 	@echo ... src/canvas.s
+	@echo ... src/intersection.obj
+	@echo ... src/intersection.i
+	@echo ... src/intersection.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
@@ -245,6 +296,9 @@ help:
 	@echo ... src/ray.obj
 	@echo ... src/ray.i
 	@echo ... src/ray.s
+	@echo ... src/sphere.obj
+	@echo ... src/sphere.i
+	@echo ... src/sphere.s
 .PHONY : help
 
 

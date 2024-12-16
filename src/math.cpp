@@ -120,6 +120,10 @@ vector point::operator-(point point1) {
     return vector(getX() - point1.getX(), getY() - point1.getY(), getZ() - point1.getZ());
 }
 
+point point::operator*(float scalar) {
+    return point(getX() * scalar, getY() * scalar, getZ() * scalar);
+}
+
 /******************************************************************************************************
  * Vector overload functions
  *******************************************************************************************************/
@@ -133,6 +137,10 @@ vector vector::operator+(vector point1) {
 
 vector vector::operator-(vector vector1) {
     return vector(getX() - vector1.getX(), getY() - vector1.getY(), getZ() - vector1.getZ());
+}
+
+vector vector::operator*(float scalar) {
+    return vector(getX() * scalar, getY() * scalar, getZ() * scalar);
 }
 
 /******************************************************************************************************

@@ -3,6 +3,9 @@
 
 #include "math.h"
 #include "canvas.h"
+#include "ray.h"
+#include "sphere.h"
+#include "intersection.h"
 
 const int width = 800;
 const int height = 800;
@@ -31,6 +34,17 @@ int main() {
     std::ofstream ppm_file("trajectory.ppm");
     ppm_file << c.canvas_to_ppm();
     ppm_file.close();
+
+    ray r(point(0, 0, 0), vector(0, 0, 1));
+    sphere s;
+
+    auto xs = s.intersect(r);
+
+    std::cout << "Count: " << xs.size() << std::endl;
+    std::cout << "Intersection 1: " << xs[0].get_t() << std::endl;
+    std::cout << "Intersection 2: " << xs[1].get_t() << std::endl;
+    xs[0].get_object()->get_origin().printTuple();
+    xs[1].get_object()->get_origin().printTuple();
 
     return 0;
 }

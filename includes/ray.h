@@ -2,16 +2,19 @@
 #define RAY_H
 
 #include "math.h"
-#include "canvas.h"
 
 class ray {
 private:
-    point o;
-    vector d;
+    point origin;
+    vector direction;
 
 public:
-    ray(point origin, vector direction) : o(origin), d(direction) {};
+    ray(point origin, vector direction) : origin(origin), direction(direction) {};
 
+    point get_origin() { return origin; }
+    vector get_direction() { return direction; }
+
+    point position(float t);
 };
 
 #endif

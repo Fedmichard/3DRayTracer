@@ -30,6 +30,7 @@ private:
 
 public:
     // default tuple constructor with initialization list
+    tuple() : x_value(0.0f), y_value(0.0f), z_value(0.0f), w_value(1.0f) {};
     tuple(float x, float y, float z, float w) : x_value(x), y_value(y), z_value(z), w_value(w) {};
     
     // Operator overload functions for tuples
@@ -61,6 +62,7 @@ public:
 class point : public tuple {
 public:
     // default tuple constructor with initialization list
+    point() : tuple(0.0f, 0.0f, 0.0f, 1.0f) {}
     point(float x, float y, float z) : tuple(x, y, z, 1.0f) {}
 
     // operator overloading functions
@@ -68,18 +70,21 @@ public:
     vector operator+(point point);
     point operator-(vector vector);
     vector operator-(point point);
+    point operator*(float scalar);
 };
 
 // vector class which inherits from tuple
 class vector : public tuple {
 public:
     // default tuple constructor with initialization list
+    vector() : tuple(0.0f, 0.0f, 0.0f, 0.0f) {}
     vector(float x, float y, float z) : tuple(x, y, z, 0.0f) {}
 
     // Operator overloading
     vector operator+(vector vector);
     point operator+(point point);
     vector operator-(vector vector);
+    vector operator*(float scalar);
    
     // Math functions
     float magnitude(); // get the magnitude of a vector
