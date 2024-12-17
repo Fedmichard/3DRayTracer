@@ -97,7 +97,7 @@ tuple tuple::operator/(float scalar) {
     return new_tuple;
 } 
 
-void tuple::printTuple() {
+void tuple::print() {
     std::cout << "{ " << getX() << ", " << getY() << ", " << getZ() << ", " << getW() << " }" << std::endl;
 }
 
@@ -246,7 +246,7 @@ bool matrix4::operator==(matrix4 &matrix) {
     return true;
 }
 
-matrix4 matrix4::operator*(matrix4& matrix) {
+matrix4 matrix4::operator*(const matrix4& matrix) {
     matrix4 m;
 
     for (int row = 0; row < rows; row++) {
@@ -261,7 +261,7 @@ matrix4 matrix4::operator*(matrix4& matrix) {
     return m;
 }
 
-tuple matrix4::operator*(tuple& t) {
+tuple matrix4::operator*(const tuple& t) {
     float x = p_matrix[0][0] * t.getX() + p_matrix[0][1] * t.getY() +
                 p_matrix[0][2] * t.getZ() + p_matrix[0][3] * t.getW();
     float y = p_matrix[1][0] * t.getX() + p_matrix[1][1] * t.getY() +
@@ -274,23 +274,25 @@ tuple matrix4::operator*(tuple& t) {
     return tuple(x, y, z, w);
 }
 
-point matrix4::operator*(point& t) {
-    float x = p_matrix[0][0] * t.getX() + p_matrix[0][1] * t.getY() +
-                p_matrix[0][2] * t.getZ() + p_matrix[0][3] * t.getW();
-    float y = p_matrix[1][0] * t.getX() + p_matrix[1][1] * t.getY() +
-                p_matrix[1][2] * t.getZ() + p_matrix[1][3] * t.getW();
-    float z = p_matrix[2][0] * t.getX() + p_matrix[2][1] * t.getY() +
-                p_matrix[2][2] * t.getZ() + p_matrix[2][3] * t.getW();
+point matrix4::operator*(const point& p) {
+    float x = p_matrix[0][0] * p.getX() + p_matrix[0][1] * p.getY() +
+                p_matrix[0][2] * p.getZ() + p_matrix[0][3] * p.getW();
+    float y = p_matrix[1][0] * p.getX() + p_matrix[1][1] * p.getY() +
+                p_matrix[1][2] * p.getZ() + p_matrix[1][3] * p.getW();
+    float z = p_matrix[2][0] * p.getX() + p_matrix[2][1] * p.getY() +
+                p_matrix[2][2] * p.getZ() + p_matrix[2][3] * p.getW();
+
+                p.getX();
     return point(x, y, z);
 }
 
-vector matrix4::operator*(vector& t) {
-    float x = p_matrix[0][0] * t.getX() + p_matrix[0][1] * t.getY() +
-                p_matrix[0][2] * t.getZ() + p_matrix[0][3] * t.getW();
-    float y = p_matrix[1][0] * t.getX() + p_matrix[1][1] * t.getY() +
-                p_matrix[1][2] * t.getZ() + p_matrix[1][3] * t.getW();
-    float z = p_matrix[2][0] * t.getX() + p_matrix[2][1] * t.getY() +
-                p_matrix[2][2] * t.getZ() + p_matrix[2][3] * t.getW();
+vector matrix4::operator*(const vector& v) {
+    float x = p_matrix[0][0] * v.getX() + p_matrix[0][1] * v.getY() +
+                p_matrix[0][2] * v.getZ() + p_matrix[0][3] * v.getW();
+    float y = p_matrix[1][0] * v.getX() + p_matrix[1][1] * v.getY() +
+                p_matrix[1][2] * v.getZ() + p_matrix[1][3] * v.getW();
+    float z = p_matrix[2][0] * v.getX() + p_matrix[2][1] * v.getY() +
+                p_matrix[2][2] * v.getZ() + p_matrix[2][3] * v.getW();
 
     return vector(x, y, z);
 }

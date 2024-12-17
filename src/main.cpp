@@ -38,40 +38,13 @@ int main() {
     ray r(point(0, 0, -5), vector(0, 0, 1));
     sphere s;
 
+    s.set_transform(matrix4::scaling(2, 2, 2));
+
     auto xs = s.intersect(r);
 
-    std::cout << "Count: " << xs.size() << std::endl;
-    std::cout << "Intersection 1: " << xs[0].get_t() << std::endl;
-    std::cout << "Intersection 2: " << xs[1].get_t() << std::endl;
-    xs[0].get_object()->get_origin().printTuple();
-    xs[1].get_object()->get_origin().printTuple();
-
-    intersection i1(5, &s);
-    intersection i2(7, &s);
-    intersection i3(-3, &s);
-    intersection i4(2, &s);
-    auto xss = intersections({i1, i2, i3, i4});
-    intersection hits = hit(xss);
-
-    std::cout << xss.size() << std::endl;
-    std::cout << xss[0].get_t() << std::endl;
-    std::cout << xss[1].get_t() << std::endl;
-
-    std::string name;
-
-    if (hits.get_t() == 5) {
-        name = "i1";
-    } else if (hits.get_t() == 7) {
-        name = "i2";
-    }  else if (hits.get_t() == -3) {
-        name = "i3";
-    }  else if (hits.get_t() == 2) {
-        name = "i4";
-    }  else {
-        name = "i is nothing";
-    }
-
-    std::cout << name << std::endl;
+    std::cout << xs.size() << std::endl;
+    std::cout << xs[0].get_t() << std::endl;
+    std::cout << xs[1].get_t() << std::endl;
 
     return 0;
 }

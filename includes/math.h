@@ -42,10 +42,10 @@ public:
     tuple operator/(float scalar); // scalar division
 
     // Getter functions for x, y, z, w values
-    float getX() { return x_value; }
-    float getY() { return y_value; }
-    float getZ() { return z_value; }
-    float getW() { return w_value; }
+    float getX() const { return x_value; }
+    float getY() const { return y_value; }
+    float getZ() const { return z_value; }
+    float getW() const { return w_value; }
 
     // Functions to check tuple equality
     bool isFloatEqual(float a, float b);
@@ -55,7 +55,7 @@ public:
     bool isPoint();
 
     // print a tuple formatted
-    void printTuple();
+    void print();
 };
 
 // point class which inherits from tuple
@@ -176,10 +176,10 @@ public:
 
     // operator overloading functions
     bool operator==(matrix4& matrix);
-    matrix4 operator*(matrix4& matrix);
-    tuple operator*(tuple& tuple); // multiplying matrix by a tuple
-    point operator*(point& tuple); // multiplying matrix by a tuple
-    vector operator*(vector& tuple); // multiplying matrix by a tuple
+    matrix4 operator*(const matrix4& matrix);
+    tuple operator*(const tuple& tuple); // multiplying matrix by a tuple
+    point operator*(const point& point); // multiplying matrix by a point
+    vector operator*(const vector& vector); // multiplying matrix by a vector
 
     // getter functions for rows and cols
     int get_rows();

@@ -15,6 +15,7 @@ public:
     vector get_direction() { return direction; }
 
     point position(float t);
+    ray transform(matrix4& matrix);
 };
 
 #endif

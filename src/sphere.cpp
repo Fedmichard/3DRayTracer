@@ -1,11 +1,14 @@
 #include "sphere.h"
 #include "intersection.h"
 
-std::vector<intersection> sphere::intersect(ray& ray) {
-    vector sphere_to_ray = ray.get_origin() - origin;
+std::vector<intersection> sphere::intersect(ray& r) {
+    matrix4 inverse = trans.inverse();
+    ray r2 = r.transform(inverse);
 
-    float a = vector::dot(ray.get_direction(), ray.get_direction());
-    float b = 2 * vector::dot(ray.get_direction(), sphere_to_ray);
+    vector sphere_to_ray = r2.get_origin() - origin;
+
+    float a = vector::dot(r2.get_direction(), r2.get_direction());
+    float b = 2 * vector::dot(r2.get_direction(), sphere_to_ray);
     float c = vector::dot(sphere_to_ray, sphere_to_ray) - radius * radius;
 
     float discriminant = b * b - 4 * a * c;
