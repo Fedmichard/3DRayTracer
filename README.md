@@ -29,3 +29,7 @@ This chapter is largely about taking our created matrix classes and creating dif
 ![image](https://github.com/user-attachments/assets/3c5eddd1-37ab-48fc-8255-440e258802f8)
 
 The bane of my existence. Will definitely need a hard earned break after this one, need to redo my documentation for all the previous sections. I was having many errors with pointers and references here I believe. The primary focus of this section was to exhibit intersections between a ray and a sphere and drawing out a sort of shadow of our 3D object. Drawn on a 400x400 canvas, anything more was past my patience.
+
+![image](https://github.com/user-attachments/assets/bcb1f6d3-c331-4da9-8e44-c460f4174be8)
+
+At least my matrix transformations were perfectly fine!
