@@ -2,6 +2,8 @@
 Created with the Guidance of Ray Tracer Challenge : A Test-driven Guide to Your First 3d Renderer created by Jamis Buck. Created a 3D raytracer in C++ in a test driven approach. Incorporates features such as: lighting.
 ### Chapter 1: Tuples, Points, and Vectors
 
+![image](https://github.com/user-attachments/assets/e3f841d1-cf96-4f45-93a7-8d1a8d7e29de)
+
 Created a custom tuple base class which will be useful in creating vectors, points, and later on colors. This has a lot of different operator overloading functions for creating new vectors and points, as  well as getting their dot products, cross products, magnitude, and normalization.
 
 ### Chapter 2: Drawing on a Canvas
@@ -21,6 +23,8 @@ This was created so that we can use later for transformations on our tuple types
 This chapter is largely about taking our created matrix classes and creating different math functions that we can apply to them. This chapter largely focused on using our previously created operator overloading functions, as well as functions for translating, scaling, rotating, and shearing a matrix. The result of these transformations will usually return another point or a different vector.
 
 ## Chapter 5: Ray-Sphere Intersections
+
+![image](https://github.com/user-attachments/assets/bbc57dac-a821-4fb3-a731-d18856fabec1)
 
 The bane of my existence. Will definitely need a hard earned break after this one, need to redo my documentation for all the previous sections. I was having many errors with pointers and references here I believe. The primary focus of this section was to exhibit intersections between a ray and a sphere and drawing out a sort of shadow of our 3D object. Drawn on a 400x400 canvas, anything more was past my patience.
 
