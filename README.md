@@ -14,6 +14,8 @@ This would be the first generated image of my raytracer. As you can see it is ve
 
 ### Chapter 3: Matrices
 
+![image](https://github.com/user-attachments/assets/bbc57dac-a821-4fb3-a731-d18856fabec1)
+
 This was created so that we can use later for transformations on our tuple types. Features creation of a matrix4, matrix3, and matrix2 classes with custom math functions such as finding the identity matrix, finding the inverse, the submatrix, the minor, the cofactor, the determinant, and it's transposition. Also adds some additionaly functions for aiding in visualizing the creation and implementations.
 
 ### Chapter 4: Matrix Transformations
@@ -24,9 +26,6 @@ This chapter is largely about taking our created matrix classes and creating dif
 
 ## Chapter 5: Ray-Sphere Intersections
 
-![image](https://github.com/user-attachments/assets/bbc57dac-a821-4fb3-a731-d18856fabec1)
-
-The bane of my existence. Will definitely need a hard earned break after this one, need to redo my documentation for all the previous sections. I was having many errors with pointers and references here I believe. The primary focus of this section was to exhibit intersections between a ray and a sphere and drawing out a sort of shadow of our 3D object. Drawn on a 400x400 canvas, anything more was past my patience.
-
 ![image](https://github.com/user-attachments/assets/3c5eddd1-37ab-48fc-8255-440e258802f8)
 
+The bane of my existence. Will definitely need a hard earned break after this one, need to redo my documentation for all the previous sections. I was having many errors with pointers and references here I believe. The primary focus of this section was to exhibit intersections between a ray and a sphere and drawing out a sort of shadow of our 3D object. Drawn on a 400x400 canvas, anything more was past my patience.
