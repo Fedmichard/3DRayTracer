@@ -15,8 +15,11 @@ const float half = wall_size / 2;
 
 int main() {
     canvas c(canvas_pixels, canvas_pixels);
-    color color1(0.0f, 1.0f, 1.0f); // Color for sphere intersections
+    color color1(0.5, 1, 0.5); // Color for sphere intersections
+    color white(255.0f, 255.0f, 255.0f); // Color for sphere intersections
+    color black(0.0f, 0.0f, 0.0f); // Color for sphere intersections
     sphere s; // Sphere definition
+    s.set_transform(matrix4::scaling(1, 0.5, 1));
 
     point ray_origin(0, 0, -5);
 
@@ -37,7 +40,7 @@ int main() {
             if (closest_intersection) {
                 c.write_pixel(x, y, color1);
             } else {
-                c.write_pixel(x, y, color(0, 0, 0)); // Optionally clear the background to black for empty pixels
+                c.write_pixel(x, y, black); // Optionally clear the background to black for empty pixels
             }
         }
     }
