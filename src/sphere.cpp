@@ -15,15 +15,22 @@ std::vector<intersection> sphere::intersect(ray& r) {
 
     std::vector<intersection> intersects;
 
-    if(discriminant < 0)  { return intersects; }
+    if (discriminant < 0) {
+        return intersects; // Return an empty list
+    }
 
     float sqrt_discriminant = sqrt(discriminant);
 
-    float t1 = (-b - sqrt(discriminant)) / (2 * a);
-    float t2 = (-b + sqrt(discriminant)) / (2 * a);
+    float t1 = (-b - sqrt_discriminant) / (2 * a);
+    float t2 = (-b + sqrt_discriminant) / (2 * a);
 
-    intersects.push_back(intersection(t1, this));
-    intersects.push_back(intersection(t2, this));
+    if (t1 > 0) {
+        intersects.push_back(intersection(t1, this));
+    }
+
+    if (t2 > 0) {
+        intersects.push_back(intersection(t2, this));
+    }
 
     return intersects;
 }

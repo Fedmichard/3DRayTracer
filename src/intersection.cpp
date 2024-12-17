@@ -2,25 +2,18 @@
 #include "sphere.h"
 #include <algorithm>
 
-intersection::intersection(float t, sphere* object) {
-    this->t = t;
-    this->object = object;
-};
-
-std::vector<intersection> intersections(std::initializer_list<intersection> inters) {
-    return std::vector<intersection>(inters);
+std::vector<intersection> intersections(std::initializer_list<intersection> intersections_list) {
+    return std::vector<intersection>(intersections_list);
 }
 
-intersection hit(std::vector<intersection> intersections) {
-    intersection choice;  // Pointer to track the best intersection
-    float shortest_distance = std::numeric_limits<float>::max();  // Start with a very large value
+intersection* hit(const std::vector<intersection>& xs) {
+    intersection* hit_result = nullptr;
 
-    for (int i = 0; i < intersections.size(); i++) {
-        if (intersections[i].get_t() > 0 && intersections[i].get_t() < shortest_distance) {
-            shortest_distance = intersections[i].get_t();
-            choice = intersections[i];
+    for (const intersection& i : xs) {
+        if (i.get_t() >= 0 && (!hit_result || i.get_t() < hit_result->get_t())) {
+            hit_result = new intersection(i); // Use a new intersection to allocate memory for the pointer
         }
     }
 
-    return choice;  // Dereference the best choice
+    return hit_result;
 }

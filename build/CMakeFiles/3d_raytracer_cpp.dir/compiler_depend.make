@@ -207,6 +207,7 @@ CMakeFiles/3d_raytracer_cpp.dir/src/intersection.cpp.obj: C:/Users/franc/Documen
   C:/msys64/mingw64/include/c++/14.1.0/bits/cpp_type_traits.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/cxxabi_forced.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/cxxabi_init_exception.h \
+  C:/msys64/mingw64/include/c++/14.1.0/bits/enable_special_members.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/exception.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/exception_defines.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/exception_ptr.h \
@@ -284,6 +285,7 @@ CMakeFiles/3d_raytracer_cpp.dir/src/intersection.cpp.obj: C:/Users/franc/Documen
   C:/msys64/mingw64/include/c++/14.1.0/istream \
   C:/msys64/mingw64/include/c++/14.1.0/limits \
   C:/msys64/mingw64/include/c++/14.1.0/new \
+  C:/msys64/mingw64/include/c++/14.1.0/optional \
   C:/msys64/mingw64/include/c++/14.1.0/ostream \
   C:/msys64/mingw64/include/c++/14.1.0/pstl/execution_defs.h \
   C:/msys64/mingw64/include/c++/14.1.0/pstl/glue_algorithm_defs.h \
@@ -388,6 +390,7 @@ CMakeFiles/3d_raytracer_cpp.dir/src/main.cpp.obj: C:/Users/franc/Documents/Perso
   C:/msys64/mingw64/include/c++/14.1.0/bits/cpp_type_traits.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/cxxabi_forced.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/cxxabi_init_exception.h \
+  C:/msys64/mingw64/include/c++/14.1.0/bits/enable_special_members.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/exception.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/exception_defines.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/exception_ptr.h \
@@ -467,6 +470,7 @@ CMakeFiles/3d_raytracer_cpp.dir/src/main.cpp.obj: C:/Users/franc/Documents/Perso
   C:/msys64/mingw64/include/c++/14.1.0/istream \
   C:/msys64/mingw64/include/c++/14.1.0/limits \
   C:/msys64/mingw64/include/c++/14.1.0/new \
+  C:/msys64/mingw64/include/c++/14.1.0/optional \
   C:/msys64/mingw64/include/c++/14.1.0/ostream \
   C:/msys64/mingw64/include/c++/14.1.0/pstl/execution_defs.h \
   C:/msys64/mingw64/include/c++/14.1.0/pstl/glue_algorithm_defs.h \
@@ -924,6 +928,7 @@ CMakeFiles/3d_raytracer_cpp.dir/src/sphere.cpp.obj: C:/Users/franc/Documents/Per
   C:/msys64/mingw64/include/c++/14.1.0/bits/cpp_type_traits.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/cxxabi_forced.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/cxxabi_init_exception.h \
+  C:/msys64/mingw64/include/c++/14.1.0/bits/enable_special_members.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/exception.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/exception_defines.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/exception_ptr.h \
@@ -1001,6 +1006,7 @@ CMakeFiles/3d_raytracer_cpp.dir/src/sphere.cpp.obj: C:/Users/franc/Documents/Per
   C:/msys64/mingw64/include/c++/14.1.0/istream \
   C:/msys64/mingw64/include/c++/14.1.0/limits \
   C:/msys64/mingw64/include/c++/14.1.0/new \
+  C:/msys64/mingw64/include/c++/14.1.0/optional \
   C:/msys64/mingw64/include/c++/14.1.0/ostream \
   C:/msys64/mingw64/include/c++/14.1.0/pstl/execution_defs.h \
   C:/msys64/mingw64/include/c++/14.1.0/pstl/glue_algorithm_defs.h \
@@ -1450,6 +1456,10 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/limits.h:
 C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/intersection.cpp:
 
 C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/sphere.h:
+
+C:/msys64/mingw64/include/c++/14.1.0/bits/enable_special_members.h:
+
+C:/msys64/mingw64/include/c++/14.1.0/optional:
 
 C:/msys64/mingw64/include/c++/14.1.0/fstream:
 

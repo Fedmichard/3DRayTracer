@@ -2,6 +2,7 @@
 #define SPHERE_H
 
 #include "ray.h"
+#include <optional>
 #include <cmath>
 
 class intersection;

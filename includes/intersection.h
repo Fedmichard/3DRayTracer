@@ -15,14 +15,13 @@ private:
     sphere* object; 
 
 public:
-    intersection(float t, sphere* object);
-    intersection() = default;
+    intersection(float t, sphere* object) : t(t), object(object) {};
 
-    float get_t() { return math::sanitize(t); }
-    sphere* get_object() { return object; }
+    float get_t() const { return math::sanitize(t); }
+    sphere* get_object() const { return object; }
 };
 
 std::vector<intersection> intersections(std::initializer_list<intersection> inters);
-intersection hit(std::vector<intersection> intersections);
+intersection* hit(const std::vector<intersection>& xs);
 
 #endif
