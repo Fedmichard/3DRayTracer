@@ -1,15 +1,14 @@
 CMakeFiles/3d_raytracer_cpp.dir/src/intersection.cpp.obj: \
  C:\Users\franc\Documents\Personal_Projects\3DRayTracer\src\intersection.cpp \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/intersection.h \
- C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/sphere.h \
- C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/ray.h \
- C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/math.h \
- C:/msys64/mingw64/include/c++/14.1.0/cmath \
- C:/msys64/mingw64/include/c++/14.1.0/bits/requires_hosted.h \
+ C:/msys64/mingw64/include/c++/14.1.0/initializer_list \
  C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/c++config.h \
  C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/os_defines.h \
  C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/cpu_defines.h \
  C:/msys64/mingw64/include/c++/14.1.0/pstl/pstl_config.h \
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/math.h \
+ C:/msys64/mingw64/include/c++/14.1.0/cmath \
+ C:/msys64/mingw64/include/c++/14.1.0/bits/requires_hosted.h \
  C:/msys64/mingw64/include/c++/14.1.0/bits/cpp_type_traits.h \
  C:/msys64/mingw64/include/c++/14.1.0/ext/type_traits.h \
  C:/msys64/mingw64/include/math.h C:/msys64/mingw64/include/crtdefs.h \
@@ -74,7 +73,6 @@ CMakeFiles/3d_raytracer_cpp.dir/src/intersection.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.1.0/ext/alloc_traits.h \
  C:/msys64/mingw64/include/c++/14.1.0/bits/alloc_traits.h \
  C:/msys64/mingw64/include/c++/14.1.0/bits/stl_vector.h \
- C:/msys64/mingw64/include/c++/14.1.0/initializer_list \
  C:/msys64/mingw64/include/c++/14.1.0/bits/stl_bvector.h \
  C:/msys64/mingw64/include/c++/14.1.0/bits/functional_hash.h \
  C:/msys64/mingw64/include/c++/14.1.0/bits/hash_bytes.h \
@@ -172,4 +170,6 @@ CMakeFiles/3d_raytracer_cpp.dir/src/intersection.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.1.0/pstl/execution_defs.h \
  C:/msys64/mingw64/include/c++/14.1.0/iostream \
  C:/msys64/mingw64/include/c++/14.1.0/istream \
- C:/msys64/mingw64/include/c++/14.1.0/bits/istream.tcc
+ C:/msys64/mingw64/include/c++/14.1.0/bits/istream.tcc \
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/sphere.h \
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/ray.h

@@ -35,7 +35,7 @@ int main() {
     ppm_file << c.canvas_to_ppm();
     ppm_file.close();
 
-    ray r(point(0, 0, 0), vector(0, 0, 1));
+    ray r(point(0, 0, -5), vector(0, 0, 1));
     sphere s;
 
     auto xs = s.intersect(r);
@@ -45,6 +45,33 @@ int main() {
     std::cout << "Intersection 2: " << xs[1].get_t() << std::endl;
     xs[0].get_object()->get_origin().printTuple();
     xs[1].get_object()->get_origin().printTuple();
+
+    intersection i1(5, &s);
+    intersection i2(7, &s);
+    intersection i3(-3, &s);
+    intersection i4(2, &s);
+    auto xss = intersections({i1, i2, i3, i4});
+    intersection hits = hit(xss);
+
+    std::cout << xss.size() << std::endl;
+    std::cout << xss[0].get_t() << std::endl;
+    std::cout << xss[1].get_t() << std::endl;
+
+    std::string name;
+
+    if (hits.get_t() == 5) {
+        name = "i1";
+    } else if (hits.get_t() == 7) {
+        name = "i2";
+    }  else if (hits.get_t() == -3) {
+        name = "i3";
+    }  else if (hits.get_t() == 2) {
+        name = "i4";
+    }  else {
+        name = "i is nothing";
+    }
+
+    std::cout << name << std::endl;
 
     return 0;
 }
