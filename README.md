@@ -23,3 +23,9 @@ This was created so that we can use later for transformations on our tuple types
 ![image](https://github.com/user-attachments/assets/70e51873-ea0a-4252-bdea-98b60c9e7e2a)
 
 This chapter is largely about taking our created matrix classes and creating different math functions that we can apply to them. This chapter largely focused on using our previously created operator overloading functions, as well as functions for translating, scaling, rotating, and shearing a matrix. The result of these transformations will usually return another point or a different vector.
+
+## Chapter 5: Ray-Sphere Intersections
+
+The bane of my existence. Will definitely need a hard earned break after this one, need to redo my documentation for all the previous sections. I was having many errors with pointers and references here I believe. The primary focus of this section was to exhibit intersections between a ray and a sphere and drawing out a sort of shadow of our 3D object.
+
+![image](https://github.com/user-attachments/assets/caea7c71-cc40-4594-8f95-c034563cd475)
