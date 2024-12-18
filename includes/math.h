@@ -68,8 +68,8 @@ public:
     // operator overloading functions
     point operator+(vector vector);
     vector operator+(point point);
-    point operator-(vector vector);
-    vector operator-(point point);
+    point operator-(const vector& vector) const;
+    vector operator-(const point& point) const;
     point operator*(float scalar);
 };
 
@@ -88,7 +88,7 @@ public:
    
     // Math functions
     float magnitude(); // get the magnitude of a vector
-    tuple normalize(); // normalize a vector
+    vector normalize(); // normalize a vector
 
     // Made into a static so it can be called without an instance of tuple
     static float dot(vector vector1, vector vector2); // dot product

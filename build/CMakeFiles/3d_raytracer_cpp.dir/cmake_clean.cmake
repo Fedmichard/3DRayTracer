@@ -14,6 +14,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/3d_raytracer_cpp.dir/src/ray.cpp.obj.d"
   "CMakeFiles/3d_raytracer_cpp.dir/src/sphere.cpp.obj"
   "CMakeFiles/3d_raytracer_cpp.dir/src/sphere.cpp.obj.d"
+  "CMakeFiles/3d_raytracer_cpp.dir/src/world.cpp.obj"
+  "CMakeFiles/3d_raytracer_cpp.dir/src/world.cpp.obj.d"
   "lib3d_raytracer_cpp.dll.a"
 )
 

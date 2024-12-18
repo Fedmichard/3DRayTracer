@@ -34,5 +34,11 @@
   "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/3d_raytracer_cpp.dir/includes_CXX.rsp -g -o CMakeFiles\\3d_raytracer_cpp.dir\\src\\sphere.cpp.obj -c C:\\Users\\franc\\Documents\\Personal_Projects\\3DRayTracer\\src\\sphere.cpp",
   "file": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/sphere.cpp",
   "output": "CMakeFiles/3d_raytracer_cpp.dir/src/sphere.cpp.obj"
+},
+{
+  "directory": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/3d_raytracer_cpp.dir/includes_CXX.rsp -g -o CMakeFiles\\3d_raytracer_cpp.dir\\src\\world.cpp.obj -c C:\\Users\\franc\\Documents\\Personal_Projects\\3DRayTracer\\src\\world.cpp",
+  "file": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/world.cpp",
+  "output": "CMakeFiles/3d_raytracer_cpp.dir/src/world.cpp.obj"
 }
 ]

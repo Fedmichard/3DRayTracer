@@ -27,6 +27,8 @@ public:
     void set_radius(float rad) { radius = rad; }
     void set_transform(const matrix4& translation) { trans = translation; }
 
+    vector normal_at(const point& p);
+
     // sphere intersects based on ray
     // from 1 ray we'll get all the intersections and each object that intersection belongs to
     std::vector<intersection> intersect(ray& r);

@@ -1,6 +1,11 @@
 #include "sphere.h"
 #include "intersection.h"
 
+vector sphere::normal_at(const point& p) {
+    vector normal = p - origin;
+    return normal.normalize();
+}
+
 std::vector<intersection> sphere::intersect(ray& r) {
     matrix4 inverse = trans.inverse();
     ray r2 = r.transform(inverse);

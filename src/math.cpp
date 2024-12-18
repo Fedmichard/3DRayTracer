@@ -112,11 +112,11 @@ vector point::operator+(point point1) {
     return vector(getX() + point1.getX(), getY() + point1.getY(), getZ() + point1.getZ());
 }
 
-point point::operator-(vector vector1) {
+point point::operator-(const vector& vector1) const {
     return point(getX() - vector1.getX(), getY() - vector1.getY(), getZ() - vector1.getZ());
 }
 
-vector point::operator-(point point1) {
+vector point::operator-(const point& point1) const {
     return vector(getX() - point1.getX(), getY() - point1.getY(), getZ() - point1.getZ());
 }
 
@@ -173,8 +173,8 @@ float vector::magnitude() {
     return std::sqrt((getX() * getX()) + (getY() * getY()) + (getZ() * getZ()));
 }
 
-tuple vector::normalize() {
-    tuple new_tuple((getX() / magnitude()), (getY() / magnitude()), (getZ() / magnitude()), getW());
+vector vector::normalize() {
+    vector new_tuple((getX() / magnitude()), (getY() / magnitude()), (getZ() / magnitude()));
 
     return new_tuple;
 }
