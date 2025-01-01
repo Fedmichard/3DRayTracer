@@ -33,3 +33,9 @@ The bane of my existence. Will definitely need a hard earned break after this on
 ![image](https://github.com/user-attachments/assets/bcb1f6d3-c331-4da9-8e44-c460f4174be8)
 
 At least my matrix transformations were perfectly fine!
+
+## Chapter 6: Light and Shading
+
+
+
+Now we're getting to the more interesting bits! In this section we implemented the Phong Reflection Model to simulate lighting and shading to our object. We also created separate world and object spaces to allow for proper transformation and lighting techniques. Using the Phong Reflection Model the interaction is simulated via Ambient reflection which is just background lighting (or light reflected from other objects in the environment), Diffuse reflection is light reflected from a matte surface which depends only on the angle between the light source and the surface normal, and finally Specular reflection which is the reflection of the light source itself and results in what is called a specular highlight (the little bright white spot you'll see on your object).
