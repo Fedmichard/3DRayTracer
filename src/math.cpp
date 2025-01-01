@@ -105,42 +105,42 @@ void tuple::print() {
  * Point overload functions
  *******************************************************************************************************/
 point point::operator+(vector vector1) {
-    return point(getX() + vector1.getX(), getY() + vector1.getY(), getZ() + vector1.getZ());
+    return point(math::sanitize(getX() + vector1.getX()), math::sanitize(getY() + vector1.getY()), math::sanitize(getZ() + vector1.getZ()));
 }
 
 vector point::operator+(point point1) {
-    return vector(getX() + point1.getX(), getY() + point1.getY(), getZ() + point1.getZ());
+    return vector(math::sanitize(getX() + point1.getX()), math::sanitize(getY() + point1.getY()), math::sanitize(getZ() + point1.getZ()));
 }
 
 point point::operator-(const vector& vector1) const {
-    return point(getX() - vector1.getX(), getY() - vector1.getY(), getZ() - vector1.getZ());
+    return point(math::sanitize(getX() - vector1.getX()), math::sanitize(getY() - vector1.getY()), math::sanitize(getZ() - vector1.getZ()));
 }
 
 vector point::operator-(const point& point1) const {
-    return vector(getX() - point1.getX(), getY() - point1.getY(), getZ() - point1.getZ());
+    return vector(math::sanitize(getX() - point1.getX()), math::sanitize(getY() - point1.getY()), math::sanitize(getZ() - point1.getZ()));
 }
 
 point point::operator*(float scalar) {
-    return point(getX() * scalar, getY() * scalar, getZ() * scalar);
+    return point(math::sanitize(getX() * scalar), math::sanitize(getY() * scalar), math::sanitize(getZ() * scalar));
 }
 
 /******************************************************************************************************
  * Vector overload functions
  *******************************************************************************************************/
 point vector::operator+(point point1) {
-    return point(getX() + point1.getX(), getY() + point1.getY(), getZ() + point1.getZ());
+    return point(math::sanitize(getX() + point1.getX()), math::sanitize(getY() + point1.getY()), math::sanitize(getZ() + point1.getZ()));
 }
 
 vector vector::operator+(vector point1) {
-    return vector(getX() + point1.getX(), getY() + point1.getY(), getZ() + point1.getZ());
+    return vector(math::sanitize(getX() + point1.getX()), math::sanitize(getY() + point1.getY()), math::sanitize(getZ() + point1.getZ()));
 }
 
 vector vector::operator-(vector vector1) {
-    return vector(getX() - vector1.getX(), getY() - vector1.getY(), getZ() - vector1.getZ());
+    return vector(math::sanitize(getX() - vector1.getX()), math::sanitize(getY() - vector1.getY()), math::sanitize(getZ() - vector1.getZ()));
 }
 
 vector vector::operator*(float scalar) {
-    return vector(getX() * scalar, getY() * scalar, getZ() * scalar);
+    return vector(math::sanitize(getX() * scalar), math::sanitize(getY() * scalar), math::sanitize(getZ() * scalar));
 }
 
 /******************************************************************************************************
@@ -174,9 +174,9 @@ float vector::magnitude() {
 }
 
 vector vector::normalize() {
-    vector new_tuple((getX() / magnitude()), (getY() / magnitude()), (getZ() / magnitude()));
+    vector new_vector((getX() / magnitude()), (getY() / magnitude()), (getZ() / magnitude()));
 
-    return new_tuple;
+    return new_vector;
 }
 
 float vector::dot(vector vector1, vector vector2) {
@@ -271,7 +271,7 @@ tuple matrix4::operator*(const tuple& t) {
     float w = p_matrix[3][0] * t.getX() + p_matrix[3][1] * t.getY() +
                 p_matrix[3][2] * t.getZ() + p_matrix[3][3] * t.getW();
 
-    return tuple(x, y, z, w);
+    return tuple(math::sanitize(x), math::sanitize(y), math::sanitize(z), w);
 }
 
 point matrix4::operator*(const point& p) {
@@ -283,7 +283,7 @@ point matrix4::operator*(const point& p) {
                 p_matrix[2][2] * p.getZ() + p_matrix[2][3] * p.getW();
 
                 p.getX();
-    return point(x, y, z);
+    return point(math::sanitize(x), math::sanitize(y), math::sanitize(z));
 }
 
 vector matrix4::operator*(const vector& v) {
@@ -294,7 +294,7 @@ vector matrix4::operator*(const vector& v) {
     float z = p_matrix[2][0] * v.getX() + p_matrix[2][1] * v.getY() +
                 p_matrix[2][2] * v.getZ() + p_matrix[2][3] * v.getW();
 
-    return vector(x, y, z);
+    return vector(math::sanitize(x), math::sanitize(y), math::sanitize(z));
 }
 
 matrix4 matrix4::identityMatrix() {

@@ -2,6 +2,7 @@
 #define SPHERE_H
 
 #include "ray.h"
+#include "world.h"
 #include <optional>
 #include <cmath>
 
@@ -27,7 +28,7 @@ public:
     void set_radius(float rad) { radius = rad; }
     void set_transform(const matrix4& translation) { trans = translation; }
 
-    vector normal_at(const point& p);
+    vector normal_at(const point& world_point);
 
     // sphere intersects based on ray
     // from 1 ray we'll get all the intersections and each object that intersection belongs to

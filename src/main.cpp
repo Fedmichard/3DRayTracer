@@ -62,5 +62,10 @@ int main() {
     vector m = y.normal_at(point(0, sqrt(2) / 2, -sqrt(2) / 2));
     m.print();
 
+    vector v(0, -1, 0);
+    vector b(sqrt(2)/2, sqrt(2)/2, 0);
+    vector r = ray::reflect(v, b);
+    r.print();
+
     return 0;
 }

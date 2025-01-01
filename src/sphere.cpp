@@ -1,9 +1,12 @@
 #include "sphere.h"
 #include "intersection.h"
 
-vector sphere::normal_at(const point& p) {
-    vector normal = p - origin;
-    return normal.normalize();
+vector sphere::normal_at(const point& world_point) {
+    point object_point = get_transform().inverse() * world_point;
+    vector object_normal = object_point - origin;
+    vector world_normal = trans.inverse().transpose() * object_normal;
+
+    return world_normal.normalize();
 }
 
 std::vector<intersection> sphere::intersect(ray& r) {
