@@ -5,12 +5,12 @@
 
 class world {
 private:
-    static point world_point;
+    point world_point;
 
 public:
+    world() = default;
 
-
-    static point get_world_point() { return world_point; }
+    point get_world_point() { return world_point; }
     void set_world_point(point new_world_point) { world_point = new_world_point; }
 
 };

@@ -1,4 +1,5 @@
 #include "sphere.h"
+#include "world.h"
 #include "intersection.h"
 
 vector sphere::normal_at(const point& world_point) {

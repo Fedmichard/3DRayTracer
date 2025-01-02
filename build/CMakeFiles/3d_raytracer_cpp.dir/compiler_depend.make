@@ -185,7 +185,6 @@ CMakeFiles/3d_raytracer_cpp.dir/src/intersection.cpp.obj: C:/Users/franc/Documen
   C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/math.h \
   C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/ray.h \
   C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/sphere.h \
-  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/world.h \
   C:/msys64/mingw64/include/_mingw.h \
   C:/msys64/mingw64/include/_mingw_mac.h \
   C:/msys64/mingw64/include/_mingw_off_t.h \
@@ -1637,11 +1636,11 @@ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/intersection.cpp:
 
 C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/sphere.h:
 
-C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/world.h:
-
 C:/msys64/mingw64/include/c++/14.1.0/bits/enable_special_members.h:
 
 C:/msys64/mingw64/include/c++/14.1.0/optional:
+
+C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/world.h:
 
 C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/world.cpp:
 

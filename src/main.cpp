@@ -2,10 +2,12 @@
 #include <fstream>
 
 #include "math.h"
+#include "world.h"
 #include "canvas.h"
 #include "ray.h"
 #include "sphere.h"
 #include "intersection.h"
+#include "light.h"
 
 const float wall_size = 7.0f;
 const float wall_z = 10.0f;
@@ -66,6 +68,11 @@ int main() {
     vector b(sqrt(2)/2, sqrt(2)/2, 0);
     vector r = ray::reflect(v, b);
     r.print();
+
+    world ww;
+    ww.get_world_point().print();
+
+    light lite()
 
     return 0;
 }

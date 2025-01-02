@@ -2,11 +2,11 @@
 #define SPHERE_H
 
 #include "ray.h"
-#include "world.h"
 #include <optional>
 #include <cmath>
 
 class intersection;
+class world;
 
 class sphere {
 private:
