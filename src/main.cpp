@@ -19,6 +19,7 @@ const float half = wall_size / 2;
 
 int main() {
     canvas c(canvas_pixels, canvas_pixels);
+    world w;
     color color1(0.5, 1, 0.5); // Color for sphere intersections
     color white(255.0f, 255.0f, 255.0f); // Color for sphere intersections
     color black(0.0f, 0.0f, 0.0f); // Color for sphere intersections
