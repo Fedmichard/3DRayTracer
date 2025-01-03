@@ -70,6 +70,7 @@ public:
     vector operator+(point point);
     point operator-(const vector& vector) const;
     vector operator-(const point& point) const;
+    point operator-();
     point operator*(float scalar);
 };
 
@@ -83,8 +84,9 @@ public:
     // Operator overloading
     vector operator+(vector vector);
     point operator+(point point);
-    vector operator-(vector vector);
-    vector operator*(float scalar);
+    vector operator-(const vector vector) const;
+    vector operator-();
+    vector operator*(float scalar) const;
    
     // Math functions
     float magnitude(); // get the magnitude of a vector
@@ -99,6 +101,7 @@ public:
 class color : public tuple {
 public:
     // default tuple constructor with initialization list
+    color() = default;
     color(float r, float g, float b) : tuple(r, g, b, 1.0f) {}
 
     // operator overloading functions

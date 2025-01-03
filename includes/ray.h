@@ -16,7 +16,7 @@ public:
 
     point position(float t);
     ray transform(matrix4& matrix);
-    static vector reflect(vector& in, vector& normal);
+    static vector reflect(const vector& in, const vector& normal);
 };
 
 #endif

@@ -176,6 +176,54 @@ src/intersection.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/intersection.cpp.s
 .PHONY : src/intersection.cpp.s
 
+src/light.obj: src/light.cpp.obj
+.PHONY : src/light.obj
+
+# target to build an object file
+src/light.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.obj
+.PHONY : src/light.cpp.obj
+
+src/light.i: src/light.cpp.i
+.PHONY : src/light.i
+
+# target to preprocess a source file
+src/light.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.i
+.PHONY : src/light.cpp.i
+
+src/light.s: src/light.cpp.s
+.PHONY : src/light.s
+
+# target to generate assembly for a file
+src/light.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.s
+.PHONY : src/light.cpp.s
+
+src/lighting.obj: src/lighting.cpp.obj
+.PHONY : src/lighting.obj
+
+# target to build an object file
+src/lighting.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/lighting.cpp.obj
+.PHONY : src/lighting.cpp.obj
+
+src/lighting.i: src/lighting.cpp.i
+.PHONY : src/lighting.i
+
+# target to preprocess a source file
+src/lighting.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/lighting.cpp.i
+.PHONY : src/lighting.cpp.i
+
+src/lighting.s: src/lighting.cpp.s
+.PHONY : src/lighting.s
+
+# target to generate assembly for a file
+src/lighting.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/lighting.cpp.s
+.PHONY : src/lighting.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -199,6 +247,30 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/material.obj: src/material.cpp.obj
+.PHONY : src/material.obj
+
+# target to build an object file
+src/material.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/material.cpp.obj
+.PHONY : src/material.cpp.obj
+
+src/material.i: src/material.cpp.i
+.PHONY : src/material.i
+
+# target to preprocess a source file
+src/material.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/material.cpp.i
+.PHONY : src/material.cpp.i
+
+src/material.s: src/material.cpp.s
+.PHONY : src/material.s
+
+# target to generate assembly for a file
+src/material.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/material.cpp.s
+.PHONY : src/material.cpp.s
 
 src/math.obj: src/math.cpp.obj
 .PHONY : src/math.obj
@@ -311,9 +383,18 @@ help:
 	@echo ... src/intersection.obj
 	@echo ... src/intersection.i
 	@echo ... src/intersection.s
+	@echo ... src/light.obj
+	@echo ... src/light.i
+	@echo ... src/light.s
+	@echo ... src/lighting.obj
+	@echo ... src/lighting.i
+	@echo ... src/lighting.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/material.obj
+	@echo ... src/material.i
+	@echo ... src/material.s
 	@echo ... src/math.obj
 	@echo ... src/math.i
 	@echo ... src/math.s

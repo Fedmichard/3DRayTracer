@@ -40,5 +40,23 @@
   "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/3d_raytracer_cpp.dir/includes_CXX.rsp -g -o CMakeFiles\\3d_raytracer_cpp.dir\\src\\world.cpp.obj -c C:\\Users\\franc\\Documents\\Personal_Projects\\3DRayTracer\\src\\world.cpp",
   "file": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/world.cpp",
   "output": "CMakeFiles/3d_raytracer_cpp.dir/src/world.cpp.obj"
+},
+{
+  "directory": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/3d_raytracer_cpp.dir/includes_CXX.rsp -g -o CMakeFiles\\3d_raytracer_cpp.dir\\src\\light.cpp.obj -c C:\\Users\\franc\\Documents\\Personal_Projects\\3DRayTracer\\src\\light.cpp",
+  "file": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/light.cpp",
+  "output": "CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.obj"
+},
+{
+  "directory": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/3d_raytracer_cpp.dir/includes_CXX.rsp -g -o CMakeFiles\\3d_raytracer_cpp.dir\\src\\material.cpp.obj -c C:\\Users\\franc\\Documents\\Personal_Projects\\3DRayTracer\\src\\material.cpp",
+  "file": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/material.cpp",
+  "output": "CMakeFiles/3d_raytracer_cpp.dir/src/material.cpp.obj"
+},
+{
+  "directory": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/3d_raytracer_cpp.dir/includes_CXX.rsp -g -o CMakeFiles\\3d_raytracer_cpp.dir\\src\\lighting.cpp.obj -c C:\\Users\\franc\\Documents\\Personal_Projects\\3DRayTracer\\src\\lighting.cpp",
+  "file": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/lighting.cpp",
+  "output": "CMakeFiles/3d_raytracer_cpp.dir/src/lighting.cpp.obj"
 }
 ]

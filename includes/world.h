@@ -12,7 +12,6 @@ public:
 
     point get_world_point() { return world_point; }
     void set_world_point(point new_world_point) { world_point = new_world_point; }
-
 };
 
 #endif

@@ -11,6 +11,12 @@ private:
 public:
     light() = default;
     light(point position, color intensity) : pos(position), intensity(intensity) {};
+
+    point getPos() const { return pos; }
+    void setPos(point position) { pos = position; }
+
+    color getIntensity() const { return intensity; }
+    void setIntensity(color intens) { intensity = intens; }
 };
 
 #endif

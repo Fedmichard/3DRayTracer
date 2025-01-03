@@ -120,6 +120,10 @@ vector point::operator-(const point& point1) const {
     return vector(math::sanitize(getX() - point1.getX()), math::sanitize(getY() - point1.getY()), math::sanitize(getZ() - point1.getZ()));
 }
 
+point point::operator-() {
+    return point(-getX(), -getY(), -getZ());
+}
+
 point point::operator*(float scalar) {
     return point(math::sanitize(getX() * scalar), math::sanitize(getY() * scalar), math::sanitize(getZ() * scalar));
 }
@@ -135,11 +139,15 @@ vector vector::operator+(vector point1) {
     return vector(math::sanitize(getX() + point1.getX()), math::sanitize(getY() + point1.getY()), math::sanitize(getZ() + point1.getZ()));
 }
 
-vector vector::operator-(vector vector1) {
+vector vector::operator-(const vector vector1) const {
     return vector(math::sanitize(getX() - vector1.getX()), math::sanitize(getY() - vector1.getY()), math::sanitize(getZ() - vector1.getZ()));
 }
 
-vector vector::operator*(float scalar) {
+vector vector::operator-() {
+    return vector(-getX(), -getY(), -getZ());
+}
+
+vector vector::operator*(float scalar) const {
     return vector(math::sanitize(getX() * scalar), math::sanitize(getY() * scalar), math::sanitize(getZ() * scalar));
 }
 

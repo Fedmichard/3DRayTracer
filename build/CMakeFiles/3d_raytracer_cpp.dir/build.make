@@ -173,6 +173,51 @@ CMakeFiles/3d_raytracer_cpp.dir/src/world.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/3d_raytracer_cpp.dir/src/world.cpp.s"
 	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\franc\Documents\Personal_Projects\3DRayTracer\src\world.cpp -o CMakeFiles\3d_raytracer_cpp.dir\src\world.cpp.s
 
+CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.obj: CMakeFiles/3d_raytracer_cpp.dir/flags.make
+CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.obj: CMakeFiles/3d_raytracer_cpp.dir/includes_CXX.rsp
+CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.obj: C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/light.cpp
+CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.obj: CMakeFiles/3d_raytracer_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\franc\Documents\Personal_Projects\3DRayTracer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.obj -MF CMakeFiles\3d_raytracer_cpp.dir\src\light.cpp.obj.d -o CMakeFiles\3d_raytracer_cpp.dir\src\light.cpp.obj -c C:\Users\franc\Documents\Personal_Projects\3DRayTracer\src\light.cpp
+
+CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\franc\Documents\Personal_Projects\3DRayTracer\src\light.cpp > CMakeFiles\3d_raytracer_cpp.dir\src\light.cpp.i
+
+CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\franc\Documents\Personal_Projects\3DRayTracer\src\light.cpp -o CMakeFiles\3d_raytracer_cpp.dir\src\light.cpp.s
+
+CMakeFiles/3d_raytracer_cpp.dir/src/material.cpp.obj: CMakeFiles/3d_raytracer_cpp.dir/flags.make
+CMakeFiles/3d_raytracer_cpp.dir/src/material.cpp.obj: CMakeFiles/3d_raytracer_cpp.dir/includes_CXX.rsp
+CMakeFiles/3d_raytracer_cpp.dir/src/material.cpp.obj: C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/material.cpp
+CMakeFiles/3d_raytracer_cpp.dir/src/material.cpp.obj: CMakeFiles/3d_raytracer_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\franc\Documents\Personal_Projects\3DRayTracer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/3d_raytracer_cpp.dir/src/material.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/3d_raytracer_cpp.dir/src/material.cpp.obj -MF CMakeFiles\3d_raytracer_cpp.dir\src\material.cpp.obj.d -o CMakeFiles\3d_raytracer_cpp.dir\src\material.cpp.obj -c C:\Users\franc\Documents\Personal_Projects\3DRayTracer\src\material.cpp
+
+CMakeFiles/3d_raytracer_cpp.dir/src/material.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/3d_raytracer_cpp.dir/src/material.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\franc\Documents\Personal_Projects\3DRayTracer\src\material.cpp > CMakeFiles\3d_raytracer_cpp.dir\src\material.cpp.i
+
+CMakeFiles/3d_raytracer_cpp.dir/src/material.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/3d_raytracer_cpp.dir/src/material.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\franc\Documents\Personal_Projects\3DRayTracer\src\material.cpp -o CMakeFiles\3d_raytracer_cpp.dir\src\material.cpp.s
+
+CMakeFiles/3d_raytracer_cpp.dir/src/lighting.cpp.obj: CMakeFiles/3d_raytracer_cpp.dir/flags.make
+CMakeFiles/3d_raytracer_cpp.dir/src/lighting.cpp.obj: CMakeFiles/3d_raytracer_cpp.dir/includes_CXX.rsp
+CMakeFiles/3d_raytracer_cpp.dir/src/lighting.cpp.obj: C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/lighting.cpp
+CMakeFiles/3d_raytracer_cpp.dir/src/lighting.cpp.obj: CMakeFiles/3d_raytracer_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\franc\Documents\Personal_Projects\3DRayTracer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/3d_raytracer_cpp.dir/src/lighting.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/3d_raytracer_cpp.dir/src/lighting.cpp.obj -MF CMakeFiles\3d_raytracer_cpp.dir\src\lighting.cpp.obj.d -o CMakeFiles\3d_raytracer_cpp.dir\src\lighting.cpp.obj -c C:\Users\franc\Documents\Personal_Projects\3DRayTracer\src\lighting.cpp
+
+CMakeFiles/3d_raytracer_cpp.dir/src/lighting.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/3d_raytracer_cpp.dir/src/lighting.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\franc\Documents\Personal_Projects\3DRayTracer\src\lighting.cpp > CMakeFiles\3d_raytracer_cpp.dir\src\lighting.cpp.i
+
+CMakeFiles/3d_raytracer_cpp.dir/src/lighting.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/3d_raytracer_cpp.dir/src/lighting.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\franc\Documents\Personal_Projects\3DRayTracer\src\lighting.cpp -o CMakeFiles\3d_raytracer_cpp.dir\src\lighting.cpp.s
+
 # Object files for target 3d_raytracer_cpp
 3d_raytracer_cpp_OBJECTS = \
 "CMakeFiles/3d_raytracer_cpp.dir/src/main.cpp.obj" \
@@ -181,7 +226,10 @@ CMakeFiles/3d_raytracer_cpp.dir/src/world.cpp.s: cmake_force
 "CMakeFiles/3d_raytracer_cpp.dir/src/canvas.cpp.obj" \
 "CMakeFiles/3d_raytracer_cpp.dir/src/ray.cpp.obj" \
 "CMakeFiles/3d_raytracer_cpp.dir/src/sphere.cpp.obj" \
-"CMakeFiles/3d_raytracer_cpp.dir/src/world.cpp.obj"
+"CMakeFiles/3d_raytracer_cpp.dir/src/world.cpp.obj" \
+"CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.obj" \
+"CMakeFiles/3d_raytracer_cpp.dir/src/material.cpp.obj" \
+"CMakeFiles/3d_raytracer_cpp.dir/src/lighting.cpp.obj"
 
 # External object files for target 3d_raytracer_cpp
 3d_raytracer_cpp_EXTERNAL_OBJECTS =
@@ -193,11 +241,14 @@ CMakeFiles/3d_raytracer_cpp.dir/src/world.cpp.s: cmake_force
 3d_raytracer_cpp.exe: CMakeFiles/3d_raytracer_cpp.dir/src/ray.cpp.obj
 3d_raytracer_cpp.exe: CMakeFiles/3d_raytracer_cpp.dir/src/sphere.cpp.obj
 3d_raytracer_cpp.exe: CMakeFiles/3d_raytracer_cpp.dir/src/world.cpp.obj
+3d_raytracer_cpp.exe: CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.obj
+3d_raytracer_cpp.exe: CMakeFiles/3d_raytracer_cpp.dir/src/material.cpp.obj
+3d_raytracer_cpp.exe: CMakeFiles/3d_raytracer_cpp.dir/src/lighting.cpp.obj
 3d_raytracer_cpp.exe: CMakeFiles/3d_raytracer_cpp.dir/build.make
 3d_raytracer_cpp.exe: CMakeFiles/3d_raytracer_cpp.dir/linkLibs.rsp
 3d_raytracer_cpp.exe: CMakeFiles/3d_raytracer_cpp.dir/objects1.rsp
 3d_raytracer_cpp.exe: CMakeFiles/3d_raytracer_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\franc\Documents\Personal_Projects\3DRayTracer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable 3d_raytracer_cpp.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\franc\Documents\Personal_Projects\3DRayTracer\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable 3d_raytracer_cpp.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\3d_raytracer_cpp.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
