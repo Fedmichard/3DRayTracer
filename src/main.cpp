@@ -13,7 +13,7 @@
 
 const float wall_size = 7.0f;
 const float wall_z = 10.0f;
-const int canvas_pixels = 400;
+const int canvas_pixels = 100;
 const float pixel_size = wall_size / canvas_pixels;
 const float half = wall_size / 2;
 
