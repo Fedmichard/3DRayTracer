@@ -7,7 +7,7 @@
 
 class canvas {
 private:
-    int width, height;
+    int width, height; // height and width of canvas
     color background = color(0.0f, 0.0f, 0.0f);
     // need pixels vector to be dynamic since we want to be able to change the size of the canvas
     std::vector<std::vector<color>> pixels;
@@ -25,9 +25,16 @@ public:
         }
     };
 
+    // function to write specific pixel
     void write_pixel(int x, int y, color color);
+
+    // function to write specific pixel
     void write_all_pixels(color color);
+
+    // converts canvas to a ppm file
     std::string canvas_to_ppm();
+
+    // the color at a specific pixel
     color pixel_at(int x, int y);
 };
 

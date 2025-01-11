@@ -143,6 +143,7 @@ CMakeFiles/3d_raytracer_cpp.dir/src/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/basic_file.h \
  C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/c++io.h \
  C:/msys64/mingw64/include/c++/14.1.0/bits/fstream.tcc \
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/canvas.h \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/math.h \
  C:/msys64/mingw64/include/c++/14.1.0/cmath \
  C:/msys64/mingw64/include/math.h \
@@ -173,10 +174,7 @@ CMakeFiles/3d_raytracer_cpp.dir/src/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/14.1.0/bits/stl_tempbuf.h \
  C:/msys64/mingw64/include/c++/14.1.0/pstl/glue_algorithm_defs.h \
  C:/msys64/mingw64/include/c++/14.1.0/pstl/execution_defs.h \
- C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/world.h \
- C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/math.h \
- C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/canvas.h \
- C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/ray.h \
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/computations.h \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/sphere.h \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/ray.h \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/material.h \
@@ -186,4 +184,10 @@ CMakeFiles/3d_raytracer_cpp.dir/src/main.cpp.obj: \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/light.h \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/lighting.h \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/light.h \
- C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/material.h
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/material.h \
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/math.h \
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/ray.h \
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/sphere.h \
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/world.h \
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/intersection.h \
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/computations.h
