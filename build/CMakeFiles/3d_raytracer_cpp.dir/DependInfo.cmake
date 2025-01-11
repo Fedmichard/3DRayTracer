@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/canvas.cpp" "CMakeFiles/3d_raytracer_cpp.dir/src/canvas.cpp.obj" "gcc" "CMakeFiles/3d_raytracer_cpp.dir/src/canvas.cpp.obj.d"
+  "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/computations.cpp" "CMakeFiles/3d_raytracer_cpp.dir/src/computations.cpp.obj" "gcc" "CMakeFiles/3d_raytracer_cpp.dir/src/computations.cpp.obj.d"
   "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/intersection.cpp" "CMakeFiles/3d_raytracer_cpp.dir/src/intersection.cpp.obj" "gcc" "CMakeFiles/3d_raytracer_cpp.dir/src/intersection.cpp.obj.d"
   "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/light.cpp" "CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.obj" "gcc" "CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.obj.d"
   "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/lighting.cpp" "CMakeFiles/3d_raytracer_cpp.dir/src/lighting.cpp.obj" "gcc" "CMakeFiles/3d_raytracer_cpp.dir/src/lighting.cpp.obj.d"

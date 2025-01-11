@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "3d_raytracer_cpp.pdb"
   "CMakeFiles/3d_raytracer_cpp.dir/src/canvas.cpp.obj"
   "CMakeFiles/3d_raytracer_cpp.dir/src/canvas.cpp.obj.d"
+  "CMakeFiles/3d_raytracer_cpp.dir/src/computations.cpp.obj"
+  "CMakeFiles/3d_raytracer_cpp.dir/src/computations.cpp.obj.d"
   "CMakeFiles/3d_raytracer_cpp.dir/src/intersection.cpp.obj"
   "CMakeFiles/3d_raytracer_cpp.dir/src/intersection.cpp.obj.d"
   "CMakeFiles/3d_raytracer_cpp.dir/src/light.cpp.obj"

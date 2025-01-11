@@ -4,6 +4,7 @@
 #include "math.h"
 #include "sphere.h"
 
+// data structure to hold all of our worlds intersections
 class computations {
 private:
     float _t;

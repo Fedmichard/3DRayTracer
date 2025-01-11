@@ -152,6 +152,30 @@ src/canvas.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/canvas.cpp.s
 .PHONY : src/canvas.cpp.s
 
+src/computations.obj: src/computations.cpp.obj
+.PHONY : src/computations.obj
+
+# target to build an object file
+src/computations.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/computations.cpp.obj
+.PHONY : src/computations.cpp.obj
+
+src/computations.i: src/computations.cpp.i
+.PHONY : src/computations.i
+
+# target to preprocess a source file
+src/computations.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/computations.cpp.i
+.PHONY : src/computations.cpp.i
+
+src/computations.s: src/computations.cpp.s
+.PHONY : src/computations.s
+
+# target to generate assembly for a file
+src/computations.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/computations.cpp.s
+.PHONY : src/computations.cpp.s
+
 src/intersection.obj: src/intersection.cpp.obj
 .PHONY : src/intersection.obj
 
@@ -380,6 +404,9 @@ help:
 	@echo ... src/canvas.obj
 	@echo ... src/canvas.i
 	@echo ... src/canvas.s
+	@echo ... src/computations.obj
+	@echo ... src/computations.i
+	@echo ... src/computations.s
 	@echo ... src/intersection.obj
 	@echo ... src/intersection.i
 	@echo ... src/intersection.s
