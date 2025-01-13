@@ -4,6 +4,7 @@
 #include "math.h"
 #include "intersection.h"
 #include "light.h"
+#include "lighting.h"
 #include "sphere.h"
 #include "computations.h"
 #include <vector>
@@ -25,7 +26,7 @@ public:
     
     // get and set light source
     light* get_light_source() { return light_source; }
-    void set_light_source(point new_world_point) { world_point = new_world_point; }
+    void set_light_source(light* light) { light_source = light; }
     
     // get and set objects
     std::vector<sphere> get_objects() { return objects; }
@@ -36,6 +37,12 @@ public:
 
     // our "hit" for all world intersections
     computations prepare_computations(const intersection& intersection, ray& ray);
+
+    // shading logic
+    color shade_hit(const computations& comps);
+    
+    // color at
+    color color_at(ray& ray);
 };
 
 #endif

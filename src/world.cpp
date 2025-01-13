@@ -32,5 +32,36 @@ computations world::prepare_computations(const intersection& inter, ray& r) {
     comps.set_eyev(-r.get_direction());
     comps.set_normalv(comps.get_object()->normal_at(comps.get_point()));
 
+    // checks it the intersection is in the sphere itself by computing dot product
+    // if dot is negative the normalv and eyev are roughly in the opposite direction
+    if (vector::dot(comps.get_normalv(), comps.get_eyev()) < 0) {
+        comps.set_inside(true);
+        comps.set_normalv(-comps.get_normalv());
+    } else {
+        comps.set_inside(false);
+    }
+
     return comps;
+}
+
+color world::shade_hit(const computations& comps) {
+    return lighting(
+        comps.get_object()->get_material(),
+        *light_source,
+        comps.get_point(),
+        comps.get_eyev(),
+        comps.get_normalv()
+    );
+}
+
+color world::color_at(ray& ray) {
+    std::vector<intersection> intersections = intersect_world(ray);
+    intersection* h = hit(intersections);
+
+    if (h) {
+        computations c = prepare_computations(*h, ray);
+        return shade_hit(c);
+    } else {
+        return color(0.0f, 0.0f, 0.0f);
+    }
 }

@@ -34,37 +34,34 @@ int main() {
     
     // sphere 1
     sphere s1; // Sphere definition
-    s1.get_material().setColor(color1);
+    s1.get_material().setColor(color2);
     s1.get_material().setDiffuse(0.7f);
     s1.get_material().setSpecular(0.2f);
+    s1.get_material().setAmbient(1.0f);
 
     // sphere 2
     sphere s2;
     s2.set_transform(matrix4::scaling(0.5, 0.5, 0.5));
+    s2.get_material().setAmbient(1.0f);
 
     // light values
     point light_position = point(-10.0f, 10.0f, -10.0f);
     color light_color = color(1.0f, 1.0f, 1.0f);
     light point_light(light_position, light_color);
 
-
     // define our world
+    w.set_light_source(&point_light);
     w.set_object(s1);
     w.set_object(s2);
 
-    auto all_spheres = w.get_objects();
+    // all objects
+    std::vector<sphere> all_spheres = w.get_objects();
 
     // unit test
-    ray rr(point(0, 0, -5), vector(0, 0, 1));
-    sphere ss;
-    intersection i(4, &ss);
-    computations comps = w.prepare_computations(i, rr);
-
-    std::cout << comps.get_t() << std::endl;
-    std::cout << comps.get_object() << std::endl;
-    comps.get_point().print();
-    comps.get_eyev().print();
-    comps.get_normalv().print();
+    ray rrrr(point(0, 0, 0.75), vector(0, 0, -1));
+    color ccccc = w.color_at(rrrr);
+    ccccc.print();
+    s2.get_material().getColor().print();
 
     // Drawing onto canvas
     for (int y = 0; y < canvas_pixels; y++) {

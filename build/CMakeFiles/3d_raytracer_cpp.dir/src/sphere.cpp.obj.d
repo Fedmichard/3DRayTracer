@@ -178,6 +178,7 @@ CMakeFiles/3d_raytracer_cpp.dir/src/sphere.cpp.obj: \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/world.h \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/intersection.h \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/light.h \
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/lighting.h \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/sphere.h \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/computations.h \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/intersection.h
