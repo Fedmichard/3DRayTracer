@@ -128,6 +128,30 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/build
 .PHONY : 3d_raytracer_cpp/fast
 
+src/camera.obj: src/camera.cpp.obj
+.PHONY : src/camera.obj
+
+# target to build an object file
+src/camera.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/camera.cpp.obj
+.PHONY : src/camera.cpp.obj
+
+src/camera.i: src/camera.cpp.i
+.PHONY : src/camera.i
+
+# target to preprocess a source file
+src/camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/camera.cpp.i
+.PHONY : src/camera.cpp.i
+
+src/camera.s: src/camera.cpp.s
+.PHONY : src/camera.s
+
+# target to generate assembly for a file
+src/camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\3d_raytracer_cpp.dir\build.make CMakeFiles/3d_raytracer_cpp.dir/src/camera.cpp.s
+.PHONY : src/camera.cpp.s
+
 src/canvas.obj: src/canvas.cpp.obj
 .PHONY : src/canvas.obj
 
@@ -401,6 +425,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... 3d_raytracer_cpp
+	@echo ... src/camera.obj
+	@echo ... src/camera.i
+	@echo ... src/camera.s
 	@echo ... src/canvas.obj
 	@echo ... src/canvas.i
 	@echo ... src/canvas.s

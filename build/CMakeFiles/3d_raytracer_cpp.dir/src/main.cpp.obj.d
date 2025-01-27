@@ -191,4 +191,10 @@ CMakeFiles/3d_raytracer_cpp.dir/src/main.cpp.obj: \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/world.h \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/intersection.h \
  C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/lighting.h \
- C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/computations.h
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/computations.h \
+ C:/Users/franc/Documents/Personal_Projects/3DRayTracer/includes/camera.h \
+ C:/msys64/mingw64/include/c++/14.1.0/queue \
+ C:/msys64/mingw64/include/c++/14.1.0/deque \
+ C:/msys64/mingw64/include/c++/14.1.0/bits/stl_deque.h \
+ C:/msys64/mingw64/include/c++/14.1.0/bits/deque.tcc \
+ C:/msys64/mingw64/include/c++/14.1.0/bits/stl_queue.h

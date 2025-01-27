@@ -64,5 +64,11 @@
   "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/3d_raytracer_cpp.dir/includes_CXX.rsp -g -o CMakeFiles\\3d_raytracer_cpp.dir\\src\\computations.cpp.obj -c C:\\Users\\franc\\Documents\\Personal_Projects\\3DRayTracer\\src\\computations.cpp",
   "file": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/computations.cpp",
   "output": "CMakeFiles/3d_raytracer_cpp.dir/src/computations.cpp.obj"
+},
+{
+  "directory": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/3d_raytracer_cpp.dir/includes_CXX.rsp -g -o CMakeFiles\\3d_raytracer_cpp.dir\\src\\camera.cpp.obj -c C:\\Users\\franc\\Documents\\Personal_Projects\\3DRayTracer\\src\\camera.cpp",
+  "file": "C:/Users/franc/Documents/Personal_Projects/3DRayTracer/src/camera.cpp",
+  "output": "CMakeFiles/3d_raytracer_cpp.dir/src/camera.cpp.obj"
 }
 ]

@@ -10,7 +10,10 @@
 #include "math.h"
 #include "ray.h"
 #include "sphere.h"
-#include "world.h"
+#include "world.h" 
+#include "camera.h"
+
+#include <queue>
 
 const float wall_size = 7.0f;
 const float wall_z = 10.0f;
@@ -41,8 +44,8 @@ int main() {
 
     // sphere 2
     sphere s2;
-    s2.set_transform(matrix4::scaling(0.5, 0.5, 0.5));
-    s2.get_material().setAmbient(1.0f);
+    // s2.set_transform(matrix4::scaling(0.5, 0.5, 0.5));
+    // s2.get_material().setAmbient(1.0f);
 
     // light values
     point light_position = point(-10.0f, 10.0f, -10.0f);
@@ -58,11 +61,14 @@ int main() {
     std::vector<sphere> all_spheres = w.get_objects();
 
     // unit test
-    ray rrrr(point(0, 0, 0.75), vector(0, 0, -1));
-    color ccccc = w.color_at(rrrr);
-    ccccc.print();
-    s2.get_material().getColor().print();
+    camera cdcsd;
 
+    point from(0, 0, 0);
+    point to(0, 0, 1);
+    vector up(0, 1, 0);
+
+    matrix4 t = cdcsd.view_transform(from, to, up);
+    
     // Drawing onto canvas
     for (int y = 0; y < canvas_pixels; y++) {
         float world_y = half - pixel_size * y;
@@ -73,15 +79,15 @@ int main() {
             vector normal_vector = (position - ray_origin).normalize();
 
             ray r(ray_origin, normal_vector);
-            auto xs = s1.intersect(r);
+            auto xs = s2.intersect(r);
 
             intersection* closest_intersection = hit(xs);
 
             if (closest_intersection) {
                 point intersection_point = r.position(closest_intersection->get_t());
-                vector normal = s1.normal_at(intersection_point);
+                vector normal = s2.normal_at(intersection_point);
                 vector eye = -r.get_direction();
-                color pixel_color = lighting(s1.get_material(), point_light, intersection_point, eye, normal);
+                color pixel_color = lighting(s2.get_material(), point_light, intersection_point, eye, normal);
                 c.write_pixel(x, y, pixel_color);
             } else {
                 c.write_pixel(x, y, black); // Optionally clear the background to black for empty pixels
