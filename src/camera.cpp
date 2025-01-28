@@ -13,5 +13,10 @@ matrix4 camera::view_transform(const point& from, const point& to, vector& up) {
         0, 0, 0, 1
     );
 
+    _transform = orientation * orientation.translation(-from.getX(), -from.getY(), -from.getZ());
     return orientation * orientation.translation(-from.getX(), -from.getY(), -from.getZ());
+}
+
+float camera::pixel_size() {
+
 }

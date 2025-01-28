@@ -61,14 +61,12 @@ int main() {
     std::vector<sphere> all_spheres = w.get_objects();
 
     // unit test
-    camera cdcsd;
+    camera cdcsd(200, 125, M_PI / 2);
+    camera cdcsd2(125, 200, M_PI / 2);
 
-    point from(0, 0, 0);
-    point to(0, 0, 1);
-    vector up(0, 1, 0);
+    std::cout << cdcsd.pixel_size() << std::endl;
+    std::cout << cdcsd2.pixel_size() << std::endl;
 
-    matrix4 t = cdcsd.view_transform(from, to, up);
-    
     // Drawing onto canvas
     for (int y = 0; y < canvas_pixels; y++) {
         float world_y = half - pixel_size * y;
