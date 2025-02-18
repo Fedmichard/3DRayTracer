@@ -18,5 +18,7 @@ matrix4 camera::view_transform(const point& from, const point& to, vector& up) {
 }
 
 float camera::pixel_size() {
-
+    float half_view = tanf(_fov / 2);
+    float aspect_ration = _hsize / _vsize;
+    
 }
